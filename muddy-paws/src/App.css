@@ -29,6 +29,7 @@
 }
 
 .main-image {
+  /*animation: App-main-move infinite 3s linear;*/
   height: 30em;
   margin: 0px 30px;
   width: 80em;
@@ -37,4 +38,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes App-main-move {
+  from { transform: translateX(-500px); }
+  to { transform: translateX(1000px); }
 }
