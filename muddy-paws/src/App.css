@@ -35,6 +35,14 @@
   width: 80em;
 }
 
+.muddy-paws-logo {
+  height: 95px;
+  left: 50px;
+  margin: 0 50px;
+  top: 10px;
+  width: 95px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
