@@ -8,7 +8,9 @@
 }
 
 .app-header {
+  border:2px solid black;
   background-color: rgb(110,129,84);
+  display: flex;
   height: 100px;
   padding: 20px;
   color: white;
@@ -28,6 +30,15 @@
   font-size: large;
 }
 
+.button-search {
+  background-color:#207cca;
+  color:#fafafa;
+  height: 50%;
+  left:-8px;
+  margin: 20px 0;
+  padding:6px 15px;
+}
+
 .main-image {
   /*animation: App-main-move infinite 3s linear;*/
   height: 30em;
@@ -37,10 +48,43 @@
 
 .muddy-paws-logo {
   height: 95px;
-  left: 50px;
-  margin: 0 50px;
+  /*left: -750px;*/
+  position: relative;
   top: 10px;
   width: 95px;
+}
+
+.search {
+  border:2px solid black;
+  display: flex;
+  left: 150px;
+  margin: 0 100px;
+  position: relative;
+  top: 10px;
+  width: 700px;
+}
+
+.search-bar {
+  border-radius: 5px;
+  height: 30px;
+  margin: 22px;
+  padding: 6px;
+  width: 600px;
+}
+
+.shopping-cart {
+  border:2px solid black;
+  display: flex;
+  margin: 0 50px;
+  position: relative;
+  right: -370px;
+}
+
+.shopping-cart-img {
+  height: 80px;
+  position: relative;
+  top: 20px;
+  width: 80px;
 }
 
 @keyframes App-logo-spin {

@@ -12,7 +12,7 @@ class Main extends Component {
 	return (
 		<div>
 		  <img src={mainImage} className="main-image" alt="mainImage"/>
-		  <p> lalala </p>
+		  <p>HELPING ALL CATS AND DOGS LIVE TO THEIR FULL POTENTIAL</p>
 		</div>
 	  );
   }
