@@ -4,6 +4,7 @@ import mainImage from './images/home_page_im1.jpg';
 import muddyPawsLogo from './images/muddy_paws_logo.png'
 import './App.css';
 import Main from './main.js';
+import Products from './products.js';
 
 class App extends Component {
 
@@ -21,6 +22,8 @@ class App extends Component {
   renderPageVIew() {
     if(this.state.page === 0)
       return <Main/>
+    if(this.state.page === 1)
+      return <Products/>
   }
 
 
@@ -33,6 +36,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="app-nav-bar">
+            <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >Products</div>
         </div>
         <p className="App-intro">
         </p>
