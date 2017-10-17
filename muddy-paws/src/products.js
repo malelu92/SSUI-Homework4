@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
+import ProductInfo from './productInfo.js';
 import StoreItem from './storeItem.js';
 
 import catHarnessOne from './images/cat_harness1.jpg';
@@ -32,8 +33,15 @@ class Products extends Component {
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id]
-    {/*var detailView = <DetailItemView onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
-    this.setState({detail: detailView})*/}
+    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
+    this.setState({detail: prodInfo})
+  }
+
+  renderProductInfo() {
+    if(this.state.detail !== null)
+    {
+      return <ProductInfo/>
+    }
   }
 
   renderInventory() {
@@ -42,11 +50,9 @@ class Products extends Component {
     {
       var item = this.state.inventory[i]
       elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} />)
-      console.log(item.image)
-      console.log(item.altText)
     }
     return (
-      <div>
+      <div className={"prods-display"}>
         {elements}
         {/*{this.renderDetailView()}*/}
       </div>

@@ -66,6 +66,12 @@
   width: 95px;
 }
 
+.prods-display {
+  border:2px solid black;
+  display: flex;
+  width: 950px;
+}
+
 .prod-img {
   border:2px solid black;
   height: 250px;
