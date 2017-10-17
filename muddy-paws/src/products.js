@@ -35,11 +35,14 @@ class Products extends Component {
     var item = this.state.inventory[id]
     var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
     this.setState({detail: prodInfo})
+    this.renderProductInfo();
   }
 
   renderProductInfo() {
+  	console.log(this.state.detail)
     if(this.state.detail !== null)
     {
+    	console.log("clicou")
       return <ProductInfo/>
     }
   }
@@ -54,7 +57,7 @@ class Products extends Component {
     return (
       <div className={"prods-display"}>
         {elements}
-        {/*{this.renderDetailView()}*/}
+        {/*this.renderProductInfo()*/}
       </div>
     )
   }

@@ -25,6 +25,9 @@ class Main extends Component {
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id];
+    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
+    this.setState({detail: prodInfo})
+    this.renderProductInfo();
   }
 
   renderInventory() {

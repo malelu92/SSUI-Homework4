@@ -42,9 +42,7 @@ class App extends Component {
           </div>
           {/* -------shopping cart icon-------- */}
           <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onClick={(ev) => this.setState({page: 2})}>
-            <a href="checkout.html">
-              <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
-            </a>
+            <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
             <p id="shopping-cart-text">0 items</p>
           </div>
         </header>
