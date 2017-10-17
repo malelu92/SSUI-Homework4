@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import mainImage from './images/home_page_im1.jpg';
-import muddyPawsLogo from './images/muddy_paws_logo.png'
-import shoppingCart from "./images/shopping_cart.png"
+import muddyPawsLogo from './images/muddy_paws_logo.png';
+import shoppingCart from "./images/shopping_cart.png";
 import './App.css';
+import Checkout from './checkout.js';
 import Main from './main.js';
 import Products from './products.js';
 
@@ -25,6 +26,8 @@ class App extends Component {
       return <Main/>
     if(this.state.page === 1)
       return <Products/>
+    if(this.state.page === 2)
+      return <Checkout/>
   }
 
 
@@ -38,7 +41,7 @@ class App extends Component {
             <input type="button" className={"button-search"} value="Search"/>
           </div>
           {/* -------shopping cart icon-------- */}
-          <div className={"shopping-cart"}>
+          <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onClick={(ev) => this.setState({page: 2})}>
             <a href="checkout.html">
               <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
             </a>

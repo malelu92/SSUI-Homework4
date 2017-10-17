@@ -46,12 +46,31 @@
   width: 80em;
 }
 
+.main-text-box {
+  background-color: rgb(110,129,84);
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  height: 50px;
+  left: 350px;
+  padding: 15px;
+  text-align: center;
+  top: 590px;
+  width: 600px;
+}
+
 .muddy-paws-logo {
   height: 95px;
   /*left: -750px;*/
   position: relative;
   top: 10px;
   width: 95px;
+}
+
+.prod-img {
+  border:2px solid black;
+  height: 250px;
+  margin: 20px 30px;
+  width: 250px;
 }
 
 .search {

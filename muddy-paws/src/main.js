@@ -10,11 +10,16 @@ class Main extends Component {
 
   render() {
 	return (
-		<div>
-		  <img src={mainImage} className="main-image" alt="mainImage"/>
+	  <div>
+		<img src={mainImage} className="main-image" alt="mainImage"/>
+		<div className={"main-text-box"}>
 		  <p>HELPING ALL CATS AND DOGS LIVE TO THEIR FULL POTENTIAL</p>
 		</div>
-	  );
+		<div className={"pop-prod"}>
+  		  <p>Most popular products:</p>
+		</div>
+	  </div>
+	);
   }
 }
 
