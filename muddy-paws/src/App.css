@@ -39,6 +39,14 @@
   padding:6px 15px;
 }
 
+.footer {
+  background-color: rgb(110,129,84);
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  height: 40px;
+  text-align: center;
+}
+
 .main-image {
   /*animation: App-main-move infinite 3s linear;*/
   height: 30em;

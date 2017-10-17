@@ -56,6 +56,9 @@ class App extends Component {
         <div>
           {this.renderPageVIew()}
         </div>
+        <div className={"footer"}>
+          <p>CONTACT US</p>
+        </div>
       </div>
     );
   }
