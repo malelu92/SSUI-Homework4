@@ -11,8 +11,8 @@ class ProductInfo extends Component {
 	  super(props);
   }
 
-  oncart() {
-    localStorage.setItem("product", "");
+  addToCart() {
+    console.log("lala")
   }
 
 
@@ -75,7 +75,7 @@ class ProductInfo extends Component {
       	  </select>
     	</div>
 
-      <input type="button" id="add-item" onclick={() => this.addToCart()} className={"button-cart"} value="ADD TO CART"></input>
+      <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
 
 	  </div>
 	);

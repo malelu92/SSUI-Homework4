@@ -16,6 +16,8 @@ class App extends Component {
     super(props);
     this.state = {
       page: 0,
+      cartQty: 0,
+      cartItems: [],
     }
   }
 
@@ -46,7 +48,7 @@ class App extends Component {
           {/* -------shopping cart icon-------- */}
           <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onClick={(ev) => this.setState({page: 2})}>
             <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
-            <p id="shopping-cart-text">0 items</p>
+            <p id="shopping-cart-text">{this.state.cartQty} items</p>
           </div>
         </header>
         <div className="app-nav-bar">
