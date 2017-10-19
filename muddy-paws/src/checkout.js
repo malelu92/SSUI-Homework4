@@ -38,12 +38,12 @@ class Checkout extends Component {
 		  <div className={"vertical-line"}></div>
 		  <div className={"screen-checkout-r"}>
 		    <div className={"checkout-cart-info"}>
-      		  <p>2 items</p>
+      		  <p>1 item</p>
       		  <p>Total U$ 51,98</p>
     		</div>
     		<input type="button" className="button-checkout" value="CHECKOUT"></input>
     		<p className={"checkout-cart-info"}>You might also like:</p>
-    		<div className="align-info">
+    		<div className={"screen-align"}>
         	  <img src={dogHarnessTwo} className={"prod-img-checkout"} alt="orange dog harness"></img>
       		  <div>
         		<p>Coastal Harness</p>
@@ -51,7 +51,7 @@ class Checkout extends Component {
         		<img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
       		  </div>
     		</div>
-    		<div className="align-info">
+    		<div className={"screen-align"}>
         	  <img src={dogHarnessThree} className={"prod-img-checkout"} alt="orange dog harness"></img>
       		  <div>
         		<p>Coastal Harness</p>

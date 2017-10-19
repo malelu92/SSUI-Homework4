@@ -78,51 +78,56 @@ class Products extends Component {
         <div className={"prod-page-screen-l"}>
           <p className={"filter-by"}>Filter by:</p>
           <p className={"filter-opt"}>Animal</p>
-              <div>
-      			<input id="checkBox" type="checkbox" id="dogsCheckbox"></input>
-      			<label for="dogsCheckbox" class="checkbox-text">Dogs</label>
-   			  </div>
-   			  <div>
-      			<input id="checkBox" type="checkbox" id="catsCheckbox"></input>
-      			<label for="catsCheckbox" class="checkbox-text">Cats</label>
-    		  </div>
+          <div className={"filter-opt-list"}>
+            <div>
+      			  <input id="checkBox" type="checkbox" id="dogsCheckbox"></input>
+      			  <label for="dogsCheckbox" class="checkbox-text">Dogs</label>
+   			    </div>
+   			    <div>
+      			  <input id="checkBox" type="checkbox" id="catsCheckbox"></input>
+      			  <label for="catsCheckbox" class="checkbox-text">Cats</label>
+    		    </div>
+          </div>
         <p className={"filter-opt"}>Customer review</p>
-        <input id="checkBox" type="checkbox"></input>
-        <img src={fiveStars} className = {"stars-main-page"}></img>
-        <br></br>
-        <input id="checkBox" type="checkbox"></input>
-        <img src={fourStars} className = {"stars-main-page"}></img>
-        <br></br>
-        <input id="checkBox" type="checkbox"></input>
-        <img src={threeStars} className = {"stars-main-page"}></img>
-        <br></br>
-        <input id="checkBox" type="checkbox"></input>
-        <img src={twoStars} className = {"stars-main-page"}></img>
-        <br></br>
-        <input id="checkBox" type="checkbox"></input>
-        <img src={oneStar} className = {"stars-main-page"}></img>
+        <div className={"filter-opt-list"}>
+          <input id="checkBox" type="checkbox"></input>
+          <img src={fiveStars} className = {"stars-main-page"}></img>
+          <br></br>
+          <input id="checkBox" type="checkbox"></input>
+          <img src={fourStars} className = {"stars-main-page"}></img>
+          <br></br>
+          <input id="checkBox" type="checkbox"></input>
+          <img src={threeStars} className = {"stars-main-page"}></img>
+          <br></br>
+          <input id="checkBox" type="checkbox"></input>
+          <img src={twoStars} className = {"stars-main-page"}></img>
+          <br></br>
+          <input id="checkBox" type="checkbox"></input>
+          <img src={oneStar} className = {"stars-main-page"}></img>
+        </div>
         <p className={"filter-opt"}>Price</p>
-    	  <p className={"filter-opt"}>Price</p>
-    	  <div>
-     		<input id="checkBox" type="checkbox" id="under10Checkbox"></input>
-      		<label for="under10Checkbox" class="checkbox-text">Under U$ 10</label>
-    	  </div>
-    	  <div>
-      		<input id="checkBox" type="checkbox" id="10to25Checkbox"></input>
-      		<label for="10to25Checkbox" class="checkbox-text">U$ 10 to U$25</label>
-    	  </div>
-    	  <div>
-      		<input id="checkBox" type="checkbox" id="25to50Checkbox"></input>
-      		<label for="25to50Checkbox" class="checkbox-text">U$ 25 to U$50</label>
-    	  </div>
-    	  <div>
-      		<input id="checkBox" type="checkbox" id="50to100Checkbox"></input>
-      		<label for="25to50Checkbox" class="checkbox-text">U$ 50 to U$100</label>
-    	  </div>
-    	  <div>
-      		<input id="checkBox" type="checkbox" id="above100Checkbox"></input>
-      		<label for="25to50Checkbox" class="checkbox-text">Above U$ 100</label>
-    	  </div>
+        <div className={"filter-opt-list"}>
+    	    <div>
+     		    <input id="checkBox" type="checkbox" id="under10Checkbox"></input>
+      		  <label for="under10Checkbox" class="checkbox-text">Under U$ 10</label>
+    	    </div>
+    	    <div>
+      		  <input id="checkBox" type="checkbox" id="10to25Checkbox"></input>
+      		  <label for="10to25Checkbox" class="checkbox-text">U$ 10 to U$25</label>
+    	    </div>
+    	    <div>
+      		  <input id="checkBox" type="checkbox" id="25to50Checkbox"></input>
+      		  <label for="25to50Checkbox" class="checkbox-text">U$ 25 to U$50</label>
+    	    </div>
+    	    <div>
+      		  <input id="checkBox" type="checkbox" id="50to100Checkbox"></input>
+      		  <label for="25to50Checkbox" class="checkbox-text">U$ 50 to U$100</label>
+    	    </div>
+    	    <div>
+      		  <input id="checkBox" type="checkbox" id="above100Checkbox"></input>
+      		  <label for="25to50Checkbox" class="checkbox-text">Above U$ 100</label>
+    	    </div>
+          </div>
         </div>
         <div className={"vertical-line"}></div>
         <div className={"prod-page-screen-r"}>
