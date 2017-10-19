@@ -17,12 +17,14 @@ class App extends Component {
     this.state = {
       page: 0,
       cartQty: 0,
-      cartItems: [],
-    }
+      cartItems: []
+    };
+    this.updateCart = this.updateCart.bind(this);
   }
 
-  navToShopPage() {
-    this.setState({page: 0})
+  updateCart(field, value) {
+    this.setState({cartQty: value});
+    console.log("parent");
   }
 
   renderPageView() {
@@ -33,7 +35,7 @@ class App extends Component {
     if(this.state.page === 2)
       return <Checkout/>
     if(this.state.page === 3)
-      return <ProductInfo/>
+      return <ProductInfo addItem={this.updateCart} updateCart={this.updateCart}/>
   }
 
   render() {

@@ -25,7 +25,8 @@ class ProductInfo extends Component {
   addToCart() {
     if (this.state.qty) {
       console.log(this.state.qty);
-      this.props.state.cartQty = this.state.qty;
+      const newQty = this.state.qty;
+      this.props.updateCart('cartQty', newQty);
     }
   }
 
