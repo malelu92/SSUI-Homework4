@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({page: 0})
   }
 
-  renderPageVIew() {
+  renderPageView() {
     if(this.state.page === 0)
       return <Main/>
     if(this.state.page === 1)
@@ -29,7 +29,6 @@ class App extends Component {
     if(this.state.page === 2)
       return <Checkout/>
   }
-
 
   render() {
     return (
@@ -52,7 +51,7 @@ class App extends Component {
         <p className="App-intro">
         </p>
         <div>
-          {this.renderPageVIew()}
+          {this.renderPageView()}
         </div>
         <div className={"footer"}>
           <p>CONTACT US</p>

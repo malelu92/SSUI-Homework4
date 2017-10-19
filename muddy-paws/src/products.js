@@ -30,14 +30,6 @@ class Products extends Component {
     }
   }
 
-  selectItem(id) {
-    console.log("selected ",id)
-    var item = this.state.inventory[id]
-    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
-    this.setState({detail: prodInfo})
-    this.renderProductInfo();
-  }
-
   renderProductInfo() {
   	console.log(this.state.detail)
     if(this.state.detail !== null)
@@ -45,6 +37,27 @@ class Products extends Component {
     	console.log("clicou")
       return <ProductInfo/>
     }
+  }
+
+  selectItem(id) {
+    console.log("selected ",id)
+    var item = this.state.inventory[id]
+    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
+    this.setState({detail: prodInfo});
+  }
+
+  createProductDivs(elements) {
+  	var elements_block = [];
+  	var divs;
+  	for(var i=0; i < elements.length; i++) {
+  		elements_block.push(elements[i])
+  		if (i%3 == 0) {
+  			elements_block.push()
+  			divs.append(elements_block);
+  			elements_block = [];
+  		}
+  	}
+  	return divs;
   }
 
   renderInventory() {
@@ -55,9 +68,33 @@ class Products extends Component {
       elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} />)
     }
     return (
-      <div className={"prods-display"}>
-        {elements}
-        {/*this.renderProductInfo()*/}
+      <div className={"screen-align"}>
+        <div className={"prod-page-screen-l"}>
+          <p className={"filter-by"}>Filter by:</p>
+              <div>
+      			<input id="checkBox" type="checkbox" id="dogsCheckbox"></input>
+      			<label for="dogsCheckbox" class="checkbox-text">Dogs</label>
+   			  </div>
+   			  <div>
+      			<input id="checkBox" type="checkbox" id="catsCheckbox"></input>
+      			<label for="catsCheckbox" class="checkbox-text">Cats</label>
+    		  </div>
+    	  <p className={"filter-opt"}>Animal</p>
+        </div>
+        <div className={"vertical-line"}></div>
+        <div className={"prod-page-screen-r"}>
+          <div className={"prods-display"}>
+            {elements[0]}
+            {elements[1]}
+            {elements[2]}
+          </div>
+          <div className={"prods-display"}>  
+            {elements[3]}
+            {elements[4]}
+            {elements[5]}
+            {this.renderProductInfo()}
+          </div>
+        </div>
       </div>
     )
   }

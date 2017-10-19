@@ -39,6 +39,14 @@
   padding:6px 15px;
 }
 
+.filter-by {
+  font-size: 200%;
+}
+
+.filter-opt {
+  font-size:130%;
+}
+
 .footer {
   background-color: rgb(110,129,84);
   font-family: 'Lato', sans-serif;
@@ -87,6 +95,19 @@
   width: 250px;
 }
 
+.prod-page-screen-l{
+  margin: 0px 20px;
+  width: 25%;
+}
+
+.prod-page-screen-r {
+  width: 75%;
+}
+
+.screen-align {
+  display: flex;
+}
+
 .search {
   border:2px solid black;
   display: flex;
@@ -110,7 +131,8 @@
   display: flex;
   margin: 0 50px;
   position: relative;
-  right: -370px;
+  /*right: -370px;*/
+  left: 10%;
 }
 
 .shopping-cart-img {
@@ -118,6 +140,10 @@
   position: relative;
   top: 20px;
   width: 80px;
+}
+
+.vertical-line {
+  border-left: solid #979797;
 }
 
 @keyframes App-logo-spin {
