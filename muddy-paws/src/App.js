@@ -7,6 +7,7 @@ import './App.css';
 import Checkout from './checkout.js';
 import Main from './main.js';
 import Products from './products.js';
+import ProductInfo from './productInfo.js'
 
 class App extends Component {
 
@@ -28,6 +29,8 @@ class App extends Component {
       return <Products/>
     if(this.state.page === 2)
       return <Checkout/>
+    if(this.state.page === 3)
+      return <ProductInfo/>
   }
 
   render() {
@@ -47,6 +50,7 @@ class App extends Component {
         </header>
         <div className="app-nav-bar">
             <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >Products</div>
+            <div className = {"app-nav-link" + (this.state.page === 3 ? " active" : "")} onClick={(ev) => this.setState({page: 3})} >spec</div>
         </div>
         <p className="App-intro">
         </p>

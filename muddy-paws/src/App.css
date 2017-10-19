@@ -22,6 +22,11 @@
   padding: 10px 0;
 }
 
+.app-nav-link {
+  float: left;
+  margin-left: 10%;
+}
+
 .App-title {
   font-size: 1.5em;
 }
