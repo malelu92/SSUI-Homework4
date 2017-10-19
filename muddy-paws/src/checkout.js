@@ -9,8 +9,13 @@ class Checkout extends Component {
   render() {
 	return (
 	  <div>
-		  <p>checkout</p>
+		<div className={"checkout-header-info"}>
+  		  <p className={"checkout-header"}>Item</p>
+  		  <p className={"checkout-header"}>Quantity</p>
+  		  <p className={"checkout-header"}>Price</p>
 		</div>
+		<hr></hr>
+	  </div>
 	);
   }
 }

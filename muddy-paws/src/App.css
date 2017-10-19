@@ -44,6 +44,18 @@
   padding:6px 15px;
 }
 
+.checkout-header{
+  font-size: 20px;
+  margin: 0 100px;
+}
+
+.checkout-header-info {
+  display: flex; 
+  left: 200px;
+  position: relative;
+  width: 800px;
+}
+
 .filter-by {
   font-size: 200%;
 }
