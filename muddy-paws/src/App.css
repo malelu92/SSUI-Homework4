@@ -56,6 +56,12 @@
   width: 800px;
 }
 
+.checkout-prod-info {
+  display: flex;
+  position: relative;
+  width: 800px;
+}
+
 .filter-by {
   font-size: 200%;
 }
@@ -117,6 +123,12 @@
   height: 250px;
   margin: 20px 30px;
   width: 250px;
+}
+
+.prod-img-checkout {
+  height: 150px;
+  margin: 20px 30px;
+  width: 150px;
 }
 
 .prod-img-sel {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css'
 
+import dogHarnessOne from './images/dog_harness1.jpg';
+
 class Checkout extends Component {
   constructor(props) {
 	super(props);
@@ -15,6 +17,22 @@ class Checkout extends Component {
   		  <p className={"checkout-header"}>Price</p>
 		</div>
 		<hr></hr>
+		<div className={"screen-align"}>
+		  <div id="l-screen-checkout">
+
+    		<div>
+      		  <div className={"screen-align"}>
+        		<img src={dogHarnessOne} className={"prod-img-checkout"} alt="orange dog harness"></img>
+        		<div className={"checkout-prod-info"}>
+          		  <p className={"checkout-cart-prod"}>Coastal Harness</p>
+          		  <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
+          		  <p className={"checkout-cart-prod"}>U$ 21,90</p>
+        		</div>
+      		  </div>
+      		  <hr></hr>
+    		</div>
+		  </div>
+		</div>
 	  </div>
 	);
   }
