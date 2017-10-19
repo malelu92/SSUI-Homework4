@@ -7,7 +7,8 @@ import './App.css';
 import Checkout from './checkout.js';
 import Main from './main.js';
 import Products from './products.js';
-import ProductInfo from './productInfo.js'
+import ProductInfo from './productInfo.js';
+import ShoppingCart from './shoppingCart.js';
 
 class App extends Component {
 

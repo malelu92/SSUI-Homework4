@@ -8,8 +8,13 @@ import fiveStars from'./images/five_stars.png';
 
 class ProductInfo extends Component {
   constructor(props) {
-	super(props);
+	  super(props);
   }
+
+  oncart() {
+    localStorage.setItem("product", "");
+  }
+
 
   render() {
 	return (
@@ -70,7 +75,7 @@ class ProductInfo extends Component {
       	  </select>
     	</div>
 
-      <input type="button" id="add-item" onclick="addToCart()" className={"button-cart"} value="ADD TO CART"></input>
+      <input type="button" id="add-item" onclick={() => this.addToCart()} className={"button-cart"} value="ADD TO CART"></input>
 
 	  </div>
 	);
