@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css'
 
 import dogHarnessOne from './images/dog_harness1.jpg';
+import dogHarnessTwo from './images/dog_harness2.jpg';
+import dogHarnessThree from './images/dog_harness3.png';
+import fiveStars from './images/five_stars.png';
 
 class Checkout extends Component {
   constructor(props) {
@@ -39,6 +42,23 @@ class Checkout extends Component {
       		  <p>Total U$ 51,98</p>
     		</div>
     		<input type="button" className="button-checkout" value="CHECKOUT"></input>
+    		<p className={"checkout-cart-info"}>You might also like:</p>
+    		<div className="align-info">
+        	  <img src={dogHarnessTwo} className={"prod-img-checkout"} alt="orange dog harness"></img>
+      		  <div>
+        		<p>Coastal Harness</p>
+        		<p>U$ 21,90</p>
+        		<img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
+      		  </div>
+    		</div>
+    		<div className="align-info">
+        	  <img src={dogHarnessThree} className={"prod-img-checkout"} alt="orange dog harness"></img>
+      		  <div>
+        		<p>Coastal Harness</p>
+        		<p>U$ 22,90</p>
+        		<img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
+      		  </div>
+    		</div>
 		  </div>
 		</div>
 	  </div>
