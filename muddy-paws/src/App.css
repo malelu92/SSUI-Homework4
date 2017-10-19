@@ -95,11 +95,30 @@
   width: 950px;
 }
 
+.prod-group-cards {
+  margin-left: 60px;
+  margin-right: 150px;
+}
+
 .prod-img {
   border:2px solid black;
   height: 250px;
   margin: 20px 30px;
   width: 250px;
+}
+
+.prod-img-sel {
+  height: 30em;
+  margin: 20px 65px;
+  width: 30em;
+}
+
+.prod-mini-cards {
+  border: 2px solid #999;
+  border-radius: 10px;
+  height: 80px;
+  margin: 0px 30px;
+  width: 80px;
 }
 
 .prod-page-screen-l{
@@ -113,6 +132,10 @@
 
 .screen-align {
   display: flex;
+}
+
+.screen-spec-prod-l {
+  width: 50%;
 }
 
 .search {
