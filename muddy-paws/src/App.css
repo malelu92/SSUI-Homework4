@@ -35,6 +35,17 @@
   font-size: large;
 }
 
+.button-checkout {
+  background-color:#d2d420;
+  border:2px solid #b2c49d;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 50px;
+  left: 40px;
+  position:relative;
+  width: 250px;
+}
+
 .button-search {
   background-color:#207cca;
   color:#fafafa;
@@ -42,6 +53,10 @@
   left:-8px;
   margin: 20px 0;
   padding:6px 15px;
+}
+
+.checkout-cart-info {
+  font-size: 20px;
 }
 
 .checkout-header{
@@ -158,6 +173,14 @@
   display: flex;
 }
 
+.screen-checkout-l {
+  width: 75%;
+}
+
+.screen-checkout-r {
+  width: 25%;
+}
+
 .screen-spec-prod-l {
   width: 50%;
 }
@@ -210,6 +233,12 @@
 .stars-main-page {
   height: 15px;
   vertical-align: middle;
+}
+
+.total-price {
+  font-size: 200%;
+  position: relative;
+  left: 750px;
 }
 
 .vertical-line {
