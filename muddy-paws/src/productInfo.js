@@ -9,12 +9,29 @@ import fiveStars from'./images/five_stars.png';
 class ProductInfo extends Component {
   constructor(props) {
 	  super(props);
+    this.state = {
+      qty: 1,
+      color: "strwaberry",
+      size: "tiny",
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handlePrint = this.handlePrint.bind(this);
   }
 
   addToCart() {
     console.log("lala")
   }
 
+  handleChange(event) {
+    this.setState({qty: event.target.qty});
+    console.log(this.state.qty)
+  }
+
+  handlePrint() {
+    if (this.state.qty) {
+      console.log(this.state.qty);
+    }
+  }
 
   render() {
 	return (
@@ -66,7 +83,7 @@ class ProductInfo extends Component {
 
     	<div className={"screen-align"}>
       	  <p>Quantity</p>
-      	  <select id="quantity">
+      	  <select id="quantity" onChange={this.handleChange}>
         	<option value="one">1</option>
         	<option value="two">2</option>
         	<option value="three">3</option>
@@ -75,7 +92,7 @@ class ProductInfo extends Component {
       	  </select>
     	</div>
 
-      <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
+      <input type="button" id="add-item" onClick={this.handlePrint.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
 
 	  </div>
 	);
