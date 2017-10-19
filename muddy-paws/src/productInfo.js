@@ -69,6 +69,9 @@ class ProductInfo extends Component {
         	<option value="five">5</option>
       	  </select>
     	</div>
+
+      <input type="button" id="add-item" onclick="addToCart()" className={"button-cart"} value="ADD TO CART"></input>
+
 	  </div>
 	);
   }
