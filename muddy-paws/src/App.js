@@ -23,7 +23,8 @@ class App extends Component {
   }
 
   updateCart(field, value) {
-    this.setState({cartQty: value});
+    var newQty = this.state.cartQty + value;
+    this.setState({cartQty: newQty});
     console.log("parent");
   }
 
