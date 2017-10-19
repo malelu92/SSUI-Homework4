@@ -12,7 +12,7 @@ class ProductInfo extends Component {
 
   render() {
 	return (
-	  <div>
+	  <div className={"screen-align"}>
 		<div className={"screen-spec-prod-l"}>
     	  <img className={"prod-img-sel"} src={dogHarnessOne} alt="orange dog harness"></img>
     	  <div className={"prod-group-cards"}>
@@ -21,6 +21,10 @@ class ProductInfo extends Component {
       		<img className={"prod-mini-cards"} src={dogHarnessOneThree} alt="orange dog harness"></img>
     	  </div>
   		</div>
+  		<div className={"vertical-line"}></div>
+  		<div className={"screen-spec-prod-r"}>
+    	  <p>Dog harness 3000</p>
+    	</div>
 	  </div>
 	);
   }

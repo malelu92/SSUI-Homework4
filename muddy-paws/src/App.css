@@ -138,6 +138,12 @@
   width: 50%;
 }
 
+.screen-spec-prod-r {
+  left: 60px;
+  position: relative;
+  width: 50%;
+}
+
 .search {
   border:2px solid black;
   display: flex;
