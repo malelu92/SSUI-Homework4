@@ -23,8 +23,7 @@ class ProductInfo extends Component {
   }
 
   handleChange(event) {
-    this.setState({qty: event.target.qty});
-    console.log(this.state.qty)
+    this.setState({qty: parseInt(event.target.value)});
   }
 
   handlePrint() {
@@ -84,11 +83,11 @@ class ProductInfo extends Component {
     	<div className={"screen-align"}>
       	  <p>Quantity</p>
       	  <select id="quantity" onChange={this.handleChange}>
-        	<option value="one">1</option>
-        	<option value="two">2</option>
-        	<option value="three">3</option>
-        	<option value="four">4</option>
-        	<option value="five">5</option>
+        	<option value="1">1</option>
+        	<option value="2">2</option>
+        	<option value="3">3</option>
+        	<option value="4">4</option>
+        	<option value="5">5</option>
       	  </select>
     	</div>
 
