@@ -15,20 +15,17 @@ class ProductInfo extends Component {
       size: "tiny",
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handlePrint = this.handlePrint.bind(this);
-  }
-
-  addToCart() {
-    console.log("lala")
+    this.addToCart = this.addToCart.bind(this);
   }
 
   handleChange(event) {
     this.setState({qty: parseInt(event.target.value)});
   }
 
-  handlePrint() {
+  addToCart() {
     if (this.state.qty) {
       console.log(this.state.qty);
+      this.props.state.cartQty = this.state.qty;
     }
   }
 
@@ -91,7 +88,7 @@ class ProductInfo extends Component {
       	  </select>
     	</div>
 
-      <input type="button" id="add-item" onClick={this.handlePrint.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
+      <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
 
 	  </div>
 	);
