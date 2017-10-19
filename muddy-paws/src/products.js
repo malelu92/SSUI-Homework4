@@ -127,7 +127,8 @@ class Products extends Component {
       		  <input id="checkBox" type="checkbox" id="above100Checkbox"></input>
       		  <label for="25to50Checkbox" class="checkbox-text">Above U$ 100</label>
     	    </div>
-          </div>
+        </div>
+        <input type="button" className={"button-cart"} value="FILTER"></input>
         </div>
         <div className={"vertical-line"}></div>
         <div className={"prod-page-screen-r"}>

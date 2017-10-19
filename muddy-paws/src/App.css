@@ -35,6 +35,18 @@
   font-size: large;
 }
 
+.button-cart {
+  background-color:#d2d420;
+  border:2px solid #b2c49d;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 60px;
+  margin-left: 10%;
+  margin-top: 30%;
+  position:relative;
+  width: 320px;
+}
+
 .button-checkout {
   background-color:#d2d420;
   border:2px solid #b2c49d;
