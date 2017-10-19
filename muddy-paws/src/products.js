@@ -12,6 +12,12 @@ import dogHarnessFive from './images/dog_harness5.png';
 import dogHarnessSix from './images/dog_harness6.png';
 import dogGPS from './images/dogGPS.jpg';
 
+import oneStar from'./images/one_star.jpg';
+import twoStars from'./images/two_stars.jpg';
+import threeStars from'./images/three_stars.jpg';
+import fourStars from'./images/four_stars.jpg';
+import fiveStars from'./images/five_stars.png';
+
 class Products extends Component {
   constructor(props) {
 	super(props);
@@ -80,16 +86,22 @@ class Products extends Component {
       			<input id="checkBox" type="checkbox" id="catsCheckbox"></input>
       			<label for="catsCheckbox" class="checkbox-text">Cats</label>
     		  </div>
-    	  <p className={"filter-opt"}>Customer review</p>
-    	  <input id="checkBox" type="checkbox"></input>
-    	  <br></br>
-    	  <input id="checkBox" type="checkbox"></input>
-    	  <br></br>
-    	  <input id="checkBox" type="checkbox"></input>
-    	  <br></br>
-    	  <input id="checkBox" type="checkbox"></input>
-    	  <br></br>
-    	  <input id="checkBox" type="checkbox"></input>
+        <p className={"filter-opt"}>Customer review</p>
+        <input id="checkBox" type="checkbox"></input>
+        <img src={fiveStars} className = {"stars-main-page"}></img>
+        <br></br>
+        <input id="checkBox" type="checkbox"></input>
+        <img src={fourStars} className = {"stars-main-page"}></img>
+        <br></br>
+        <input id="checkBox" type="checkbox"></input>
+        <img src={threeStars} className = {"stars-main-page"}></img>
+        <br></br>
+        <input id="checkBox" type="checkbox"></input>
+        <img src={twoStars} className = {"stars-main-page"}></img>
+        <br></br>
+        <input id="checkBox" type="checkbox"></input>
+        <img src={oneStar} className = {"stars-main-page"}></img>
+        <p className={"filter-opt"}>Price</p>
     	  <p className={"filter-opt"}>Price</p>
     	  <div>
      		<input id="checkBox" type="checkbox" id="under10Checkbox"></input>

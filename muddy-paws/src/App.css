@@ -142,6 +142,11 @@
   width: 80px;
 }
 
+.stars-main-page {
+  height: 15px;
+  vertical-align: middle;
+}
+
 .vertical-line {
   border-left: solid #979797;
 }
