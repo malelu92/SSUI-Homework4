@@ -59,6 +59,13 @@
   font-size: 20px;
 }
 
+.checkout-cart-prod {
+  height: 40px;
+  margin: 70px 30px;
+  position: relative;
+  width: 600px;
+}
+
 .checkout-header{
   font-size: 20px;
   margin: 0 100px;
@@ -236,9 +243,10 @@
 }
 
 .total-price {
+  float: left;
   font-size: 200%;
+  margin-left: 80%;
   position: relative;
-  left: 750px;
 }
 
 .vertical-line {
