@@ -12,6 +12,27 @@ class Checkout extends Component {
   }
 
   renderProducts() {
+    var difProds = this.props.cartItems.length
+    var items = [];
+    var test = []
+    test.push("lala")
+    test.push("lel")
+    for (var i = 0; i < difProds; i++) {
+      items.push(        
+          <div className={"checkout-prod-info"}>
+            <p className={"checkout-cart-prod"}>{this.props.cartItems[i][1]}</p>
+            <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
+            <p className={"checkout-cart-prod"}>U$ {this.props.cartItems[i][3]}</p>
+          </div>);
+    }
+    return (
+    <div>
+      {items}
+      "Some text value"
+    </div>
+    );
+    {/*console.log(this.props.cartItems[0][2])
+    console.log(this.props.cartItems[1][2])
     return (
       <div className={"screen-align"}>
         <img src={dogHarnessOne} className={"prod-img-checkout"} alt="orange dog harness"></img>
@@ -21,7 +42,7 @@ class Checkout extends Component {
           <p className={"checkout-cart-prod"}>U$ 21,90</p>
         </div>
       </div>
-    );
+    );*/}
   }
 
   render() {
