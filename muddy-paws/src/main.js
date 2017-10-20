@@ -20,14 +20,16 @@ class Main extends Component {
       inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],
       detail: null,
     }
+    this.selectItem = this.selectItem.bind(this);
   }
 
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id];
     var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
+    this.props.updatePage('page', 3);
     this.setState({detail: prodInfo})
-    this.renderProductInfo();
+    {/*this.renderProductInfo();*/}
   }
 
   renderInventory() {

@@ -20,6 +20,7 @@ class App extends Component {
       cartItems: []
     };
     this.updateCart = this.updateCart.bind(this);
+    this.updatePage = this.updatePage.bind(this);
     this.onHover = this.onHover.bind(this);
   }
 
@@ -33,15 +34,27 @@ class App extends Component {
     console.log("parent");
   }
 
+  updatePage(field, value) {
+    /*var newPage = value;*/
+    this.setState({page: value});
+    this.renderPageView();
+    /*console.log("parent");*/
+  }
+
   renderPageView() {
     if(this.state.page === 0)
-      return <Main/>
+      return <Main
+              updatePage={this.updatePage}
+              />
     if(this.state.page === 1)
       return <Products/>
     if(this.state.page === 2)
       return <Checkout/>
     if(this.state.page === 3)
-      return <ProductInfo addItem={this.updateCart} updateCart={this.updateCart}/>
+      return <ProductInfo 
+              addItem={this.updateCart} 
+              updateCart={this.updateCart}
+              />
   }
 
   render() {
