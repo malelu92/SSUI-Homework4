@@ -56,7 +56,9 @@ class App extends Component {
               updatePage={this.updatePage}
               />
     if(this.state.page === 2)
-      return <Checkout/>
+      return <Checkout
+              cartQty={this.state.cartQty}
+              />
     if(this.state.page === 3)
       return <ProductInfo 
               addItem={this.updateCart} 
