@@ -36,7 +36,11 @@ class App extends Component {
   }
 
   updatePage(field, value) {
-    this.setState({page: value});
+    this.setState({page: 3});
+    this.setState({prodSel: value});
+    console.log("prod img" + value[0])
+    console.log("prod alttext" + value[1])
+    console.log("prod desc" + value[2])
     this.renderPageView();
     /*console.log("parent");*/
   }

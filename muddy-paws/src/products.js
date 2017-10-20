@@ -49,8 +49,12 @@ class Products extends Component {
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id]
-    var prodInfo = <productInfo image = {item.image} altText = {item.altText} description = {item.description} prodId = {item.prodId} />
-    this.props.updatePage('page', 3);
+    {/*var prodInfo = <productInfo image = {item.image} altText = {item.altText} description = {item.description} prodId = {item.prodId} />*/}
+    var prodInfo = [];
+    prodInfo.push(item.image);
+    prodInfo.push(item.altText);
+    prodInfo.push(item.description);
+    this.props.updatePage('prodSel', prodInfo);
     {/*this.setState({detail: prodInfo})*/}
     {/*this.renderProductInfo();*/}
   }
