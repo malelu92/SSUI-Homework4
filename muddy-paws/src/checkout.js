@@ -41,7 +41,7 @@ class Checkout extends Component {
       		  <p>{this.props.cartQty} items</p>
       		  <p>Total U$ {this.props.totalPrice}</p>
     		</div>
-    		<input type="button" className="button-checkout" value="CHECKOUT"></input>
+    		<input type="button" className="button-cart checkout" value="CHECKOUT"></input>
     		<p className={"checkout-cart-info"}>You might also like:</p>
     		<div className={"screen-align"}>
         	  <img src={dogHarnessTwo} className={"prod-img-checkout"} alt="orange dog harness"></img>

@@ -52,14 +52,9 @@
   margin-top: 10%;
 }
 
-.button-checkout {
-  background-color:#d2d420;
-  border:2px solid #b2c49d;
-  border-radius: 10px;
-  font-size: 20px;
+.button-cart.checkout {
   height: 50px;
   margin-left: 10%;
-  position:relative;
   width: 250px;
 }
 

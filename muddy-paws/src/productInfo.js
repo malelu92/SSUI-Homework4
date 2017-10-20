@@ -13,6 +13,7 @@ class ProductInfo extends Component {
       qty: 1,
       color: "strawberry",
       size: "tiny",
+      image: dogHarnessOne
     }
     this.handleChange = this.handleChange.bind(this);
     this.addToCart = this.addToCart.bind(this);
@@ -20,6 +21,7 @@ class ProductInfo extends Component {
 
   handleChange(event) {
     this.setState({qty: parseInt(event.target.value)});
+    console.log(this.props.prodSel[0])
   }
 
   addToCart() {
@@ -33,7 +35,7 @@ class ProductInfo extends Component {
 	return (
 	  <div className={"screen-align"}>
 		<div className={"screen-spec-prod-l"}>
-    	  <img className={"prod-img-sel"} src={dogHarnessOne} alt="orange dog harness"></img>
+    	  <img className={"prod-img-sel"} src={this.state.image} alt="orange dog harness"></img>
     	  <div className={"prod-group-cards"}>
       	  	<img className={"prod-mini-cards"} src={dogHarnessOne} alt="orange dog harness"></img>
       		<img className={"prod-mini-cards"} src={dogHarnessOneTwo} alt="orange dog harness"></img>

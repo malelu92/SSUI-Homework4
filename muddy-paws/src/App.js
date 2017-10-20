@@ -65,6 +65,7 @@ class App extends Component {
       return <ProductInfo 
               addItem={this.updateCart} 
               updateCart={this.updateCart}
+              prodSel={this.state.prodSel}
               />
   }
 
