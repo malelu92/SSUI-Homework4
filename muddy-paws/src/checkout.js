@@ -11,6 +11,19 @@ class Checkout extends Component {
 	super(props);
   }
 
+  renderProducts() {
+    return (
+      <div className={"screen-align"}>
+        <img src={dogHarnessOne} className={"prod-img-checkout"} alt="orange dog harness"></img>
+        <div className={"checkout-prod-info"}>
+          <p className={"checkout-cart-prod"}>Coastal Harness</p>
+          <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
+          <p className={"checkout-cart-prod"}>U$ 21,90</p>
+        </div>
+      </div>
+    );
+  }
+
   render() {
 	return (
 	  <div>
@@ -23,16 +36,9 @@ class Checkout extends Component {
 		<div className={"screen-align"}>
 		  <div className={"screen-checkout-l"}>
     		<div>
-      		  <div className={"screen-align"}>
-        		<img src={dogHarnessOne} className={"prod-img-checkout"} alt="orange dog harness"></img>
-        		<div className={"checkout-prod-info"}>
-          		  <p className={"checkout-cart-prod"}>Coastal Harness</p>
-          		  <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
-          		  <p className={"checkout-cart-prod"}>U$ 21,90</p>
-        		</div>
-      		  </div>
-      		  <hr></hr>
-      		  <p className={"total-price"}>Total U$ {this.props.totalPrice}</p>
+          {this.renderProducts()}
+      		<hr></hr>
+      		<p className={"total-price"}>Total U$ {this.props.totalPrice}</p>
     		</div>
 		  </div>
 		  <div className={"vertical-line"}></div>

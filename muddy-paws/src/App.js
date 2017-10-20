@@ -33,8 +33,9 @@ class App extends Component {
   updateCart(field, value) {
     var newQty = this.state.cartQty + value;
     this.setState({cartQty: newQty});
-    console.log("parentlala");
-    console.log(this.state.cartQty)
+    this.state.cartItems.push(this.state.prodSel)
+    console.log(this.state.prodSel[1])
+    console.log(this.state.cartItems[0][1])
   }
 
   updatePage(field, value) {
@@ -57,6 +58,7 @@ class App extends Component {
       return <Checkout
               cartQty={this.state.cartQty}
               totalPrice={this.state.totalPrice}
+              cartItems={this.state.cartItems}
               />
     if(this.state.page === 3)
       return <ProductInfo 
