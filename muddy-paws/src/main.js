@@ -25,12 +25,17 @@ class Main extends Component {
   }
 
   selectItem(id) {
-    console.log("selected ",id)
+    {/*console.log("selected ",id)*/}
     var item = this.state.inventory[id];
-    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
-    this.props.updatePage('page', 3);
-    this.setState({detail: prodInfo})
-    {/*this.renderProductInfo();*/}
+    {/*var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />*/}
+    var prodInfo = [];
+    prodInfo.push(item.image);
+    prodInfo.push(item.altText);
+    prodInfo.push(item.description);
+    prodInfo.push(item.price);
+    this.props.updatePage('prodSel', prodInfo);
+    {/*this.setState({detail: prodInfo})
+    this.renderProductInfo();*/}
   }
 
   renderInventory() {

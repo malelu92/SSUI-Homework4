@@ -20,7 +20,6 @@ class ProductInfo extends Component {
       qty: 1,
       color: "strawberry",
       size: "tiny",
-      image: dogHarnessOne
     }
     this.handleChange = this.handleChange.bind(this);
     this.addToCart = this.addToCart.bind(this);
@@ -28,8 +27,6 @@ class ProductInfo extends Component {
 
   handleChange(event) {
     this.setState({qty: parseInt(event.target.value)});
-    console.log(this.props.prodSel[0])
-    console.log(this.props.prodSel[1])
   }
 
   addToCart() {
