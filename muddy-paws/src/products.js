@@ -149,6 +149,10 @@ class Products extends Component {
             {elements[4]}
             {elements[5]}
           </div>
+          <div className={"prods-display"}>  
+            {elements[6]}
+            {elements[7]}
+          </div>
         </div>
       </div>
     )
