@@ -203,6 +203,10 @@
   width: 80px;
 }
 
+.prod-name {
+  font-size: 300%;
+}
+
 .prod-page-screen-l{
   margin: 0px 20px;
   width: 25%;
@@ -210,6 +214,10 @@
 
 .prod-page-screen-r {
   width: 75%;
+}
+
+.prod-opt {
+  margin-top: 40%;
 }
 
 .screen-align {

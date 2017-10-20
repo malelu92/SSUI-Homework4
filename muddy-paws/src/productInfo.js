@@ -44,7 +44,7 @@ class ProductInfo extends Component {
   		<div className={"vertical-line"}></div>
 
   		<div className={"screen-spec-prod-r"}>
-    	  <p>Dog harness 3000</p>
+    	  <p className={"prod-name"}>Dog harness 3000</p>
     	  <div className={"screen-align"}>
       	    <p>
       	      <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
@@ -55,6 +55,7 @@ class ProductInfo extends Component {
 
     	<br></br>
 
+      <div className={"prod-opt"}>
     	<div className={"screen-align"}>
       	  <p>Size</p>
       	  <select id="size">
@@ -87,6 +88,7 @@ class ProductInfo extends Component {
         	<option value="5">5</option>
       	  </select>
     	</div>
+      </div>
 
       <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
 

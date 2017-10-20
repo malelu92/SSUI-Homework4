@@ -18,7 +18,7 @@ class App extends Component {
       page: 0,
       cartQty: 0,
       cartItems: [],
-      prodSel: {}
+      prodSel: []
     };
     this.updateCart = this.updateCart.bind(this);
     this.updatePage = this.updatePage.bind(this);
@@ -32,15 +32,16 @@ class App extends Component {
   updateCart(field, value) {
     var newQty = this.state.cartQty + value;
     this.setState({cartQty: newQty});
-    console.log("parent");
+    console.log("parentlala");
+    console.log(this.state.cartQty)
   }
 
   updatePage(field, value) {
     this.setState({page: 3});
     this.setState({prodSel: value});
-    console.log("prod img" + value[0])
-    console.log("prod alttext" + value[1])
-    console.log("prod desc" + value[2])
+    console.log("prod img " + this.state.prodSel[0])
+    console.log("prod alttext " + this.state.prodSel[1])
+    console.log("prod desc " + this.state.prodSel[2])
     this.renderPageView();
     /*console.log("parent");*/
   }
