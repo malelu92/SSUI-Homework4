@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import './App.css'
 
-import catHarnessOne from './images/cat_harness1.jpg';
 import dogHarnessOne from './images/dog_harness1.jpg';
 import dogHarnessOneTwo from './images/dog_harness1_2.jpg';
 import dogHarnessOneThree from './images/dog_harness1_3.jpg';
-import dogHarnessTwo from './images/dog_harness2.jpg';
-import dogHarnessThree from './images/dog_harness3.png';
-import dogHarnessFour from './images/dog_harness4.png';
-import dogHarnessFive from './images/dog_harness5.png';
-import dogHarnessSix from './images/dog_harness6.png';
-import dogGPS from './images/dogGPS.jpg';
 import fiveStars from'./images/five_stars.png';
 
 class ProductInfo extends Component {
