@@ -48,6 +48,10 @@
   width: 320px;
 }
 
+.button-cart.filter {
+  margin-top: 10%;
+}
+
 .button-checkout {
   background-color:#d2d420;
   border:2px solid #b2c49d;
@@ -102,27 +106,24 @@
 }
 
 .filter-by {
-  border:2px solid black;
   font-size: 200%;
   margin-left: 10%;
   position: relative;
+  text-align: left;
 }
 
 .filter-opt {
-  border:2px solid black;
   font-size:130%;
   margin-left: 10%;
   position: relative;
-  top: 10%;
+  text-align: left;
 }
 
 .filter-opt-list {
   align-self: flex-start;
-  border:2px solid black;
-  font-size:130%;
-  /*margin-left: 10%;*/
+  margin-left: 10%;
   position: relative;
-  top: 10%;
+  text-align: left;
 }
 
 .footer {
@@ -170,7 +171,6 @@
 
 .pop-prod-text {
   text-align: left;
-  border:2px solid black;
   font-family: 'Lato', sans-serif;
   font-size: 150%;
 }
@@ -298,7 +298,6 @@
 }
 
 .stars-main-page {
-  border:2px solid black;
   height: 15px;
   vertical-align: middle;
 }
