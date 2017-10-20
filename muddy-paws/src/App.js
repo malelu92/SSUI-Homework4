@@ -47,7 +47,9 @@ class App extends Component {
               updatePage={this.updatePage}
               />
     if(this.state.page === 1)
-      return <Products/>
+      return <Products
+              updatePage={this.updatePage}
+              />
     if(this.state.page === 2)
       return <Checkout/>
     if(this.state.page === 3)

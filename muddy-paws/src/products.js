@@ -34,6 +34,7 @@ class Products extends Component {
       inventory: [dogHarness1, dogHarness2, dogHarness3, dogHarness4, dogHarness5, dogHarness6, dog_gps, catHarness1],
       detail: null,
     }
+    this.selectItem = this.selectItem.bind(this);
   }
 
   renderProductInfo() {
@@ -49,7 +50,9 @@ class Products extends Component {
     console.log("selected ",id)
     var item = this.state.inventory[id]
     var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
-    this.setState({detail: prodInfo});
+    this.props.updatePage('page', 3);
+    this.setState({detail: prodInfo})
+    {/*this.renderProductInfo();*/}
   }
 
   createProductDivs(elements) {
