@@ -21,14 +21,14 @@ import fiveStars from'./images/five_stars.png';
 class Products extends Component {
   constructor(props) {
 	super(props);
-	var dogHarness1 = {image: dogHarnessOne, altText: "dog harness", description: "$22 dog harness", prodId: 1};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "dog harness2", description: "$23 dog harness", prodId: 2};
-	var dogHarness3 = {image: dogHarnessThree, altText: "dog harness3", description: "$20 dog harness", prodId: 3};
-	var dogHarness4 = {image: dogHarnessFour, altText: "dog harness4", description: "$23 dog harness", prodId: 4};
-	var dogHarness5 = {image: dogHarnessFive, altText: "dog harness5", description: "$23 dog harness", prodId: 5};
-	var dogHarness6 = {image: dogHarnessSix, altText: "dog harness6", description: "$23 dog harness", prodId: 6};
-	var dog_gps = {image: dogGPS, altText: "dog gps", description: "$23 dog gps"};
-	var catHarness1 = {image: catHarnessOne, altText: "cat harness1", description: "$23 cat harness"};
+	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22 dog harness", prodId: 1};
+	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$23 dog harness", prodId: 2};
+	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$20 dog harness", prodId: 3};
+	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "$23 dog harness", prodId: 4};
+	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "$23 dog harness", prodId: 5};
+	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "$23 dog harness", prodId: 6};
+	var dog_gps = {image: dogGPS, altText: "Dog GPS", description: "$23 dog gps"};
+	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "$23 cat harness"};
 
 	this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, dogHarness4, dogHarness5, dogHarness6, dog_gps, catHarness1],

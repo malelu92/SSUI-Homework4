@@ -22,6 +22,7 @@ class ProductInfo extends Component {
   handleChange(event) {
     this.setState({qty: parseInt(event.target.value)});
     console.log(this.props.prodSel[0])
+    console.log(this.props.prodSel[1])
   }
 
   addToCart() {
@@ -46,7 +47,7 @@ class ProductInfo extends Component {
   		<div className={"vertical-line"}></div>
 
   		<div className={"screen-spec-prod-r"}>
-    	  <p className={"prod-name"}>Dog harness 3000</p>
+    	  <p className={"prod-name"}>{this.props.prodSel[1]}</p>
     	  <div className={"screen-align"}>
       	    <p>
       	      <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>

@@ -11,10 +11,10 @@ import mainImage from './images/home_page_im1.jpg';
 class Main extends Component {
   constructor(props) {
 	super(props);
-	var dogHarness1 = {image: dogHarnessOne, altText: "dog harness", description: "$22 dog harness"};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "dog harness2", description: "$23 dog harness"};
-	var dogHarness3 = {image: dogHarnessThree, altText: "dog harness3", description: "$20 dog harness"};
-	var catHarness1 = {image: catHarnessOne, altText: "cat harness1", description: "$23 cat harness"};
+	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22 dog harness"};
+	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$23 dog harness"};
+	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$20 dog harness"};
+	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "$23 cat harness"};
 
 	this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],
