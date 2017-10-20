@@ -21,12 +21,12 @@ import fiveStars from'./images/five_stars.png';
 class Products extends Component {
   constructor(props) {
 	super(props);
-	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22 dog harness", prodId: 1};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$23 dog harness", prodId: 2};
-	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$20 dog harness", prodId: 3};
-	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "$23 dog harness", prodId: 4};
-	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "$23 dog harness", prodId: 5};
-	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "$23 dog harness", prodId: 6};
+	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22.50 dog harness", price: "S 22.50"};
+	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$25.99 dog harness",  price: "S 25.99"};
+	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$15.00 dog harness", price: "$ 15.00"};
+	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "$20.90 dog harness", price: "$ 20.90"};
+	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "$30 dog harness", price: "$ 30.00"};
+	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "$14.50 dog harness", price: "$ 14.50"};
 	var dog_gps = {image: dogGPS, altText: "Dog GPS", description: "$23 dog gps"};
 	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "$23 cat harness"};
 
@@ -54,6 +54,7 @@ class Products extends Component {
     prodInfo.push(item.image);
     prodInfo.push(item.altText);
     prodInfo.push(item.description);
+    prodInfo.push(item.price);
     this.props.updatePage('prodSel', prodInfo);
     {/*this.setState({detail: prodInfo})*/}
     {/*this.renderProductInfo();*/}

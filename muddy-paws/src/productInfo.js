@@ -53,7 +53,7 @@ class ProductInfo extends Component {
       	      <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
             customer review</p>
     	  </div>
-    	  <p className={"prod-price"}>U$ 25,90</p>
+    	  <p className={"prod-price"}>U{this.props.prodSel[3]}</p>
 
     	<br></br>
 
