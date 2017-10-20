@@ -215,8 +215,8 @@
 
 .prod-name {
   font-size: 300%;
-  margin-right: 50%;
   position: relative;
+  text-align: left;
 }
 
 .prod-page-screen-l{
@@ -230,7 +230,7 @@
 
 .prod-price {
   font-size: 250%;
-  margin-right: 78%;
+  text-align: left;
 }
 
 .screen-align {
