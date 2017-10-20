@@ -18,7 +18,8 @@ class App extends Component {
       page: 0,
       cartQty: 0,
       cartItems: [],
-      prodSel: []
+      prodSel: [],
+      totalPrice: 0.00
     };
     this.updateCart = this.updateCart.bind(this);
     this.updatePage = this.updatePage.bind(this);
@@ -58,6 +59,7 @@ class App extends Component {
     if(this.state.page === 2)
       return <Checkout
               cartQty={this.state.cartQty}
+              totalPrice={this.state.totalPrice}
               />
     if(this.state.page === 3)
       return <ProductInfo 

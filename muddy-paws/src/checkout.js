@@ -32,14 +32,14 @@ class Checkout extends Component {
         		</div>
       		  </div>
       		  <hr></hr>
-      		  <p className={"total-price"}>Total U$51,98</p>
+      		  <p className={"total-price"}>Total U$ {this.props.totalPrice}</p>
     		</div>
 		  </div>
 		  <div className={"vertical-line"}></div>
 		  <div className={"screen-checkout-r"}>
 		    <div className={"checkout-cart-info"}>
       		  <p>{this.props.cartQty} items</p>
-      		  <p>Total U$ 51,98</p>
+      		  <p>Total U$ {this.props.totalPrice}</p>
     		</div>
     		<input type="button" className="button-checkout" value="CHECKOUT"></input>
     		<p className={"checkout-cart-info"}>You might also like:</p>
