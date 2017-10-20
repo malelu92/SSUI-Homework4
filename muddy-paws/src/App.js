@@ -20,6 +20,11 @@ class App extends Component {
       cartItems: []
     };
     this.updateCart = this.updateCart.bind(this);
+    this.onHover = this.onHover.bind(this);
+  }
+
+  onHover() {
+    console.log("hover")
   }
 
   updateCart(field, value) {
@@ -49,7 +54,7 @@ class App extends Component {
             <input type="button" className={"button-search"} value="Search"/>
           </div>
           {/* -------shopping cart icon-------- */}
-          <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onClick={(ev) => this.setState({page: 2})}>
+          <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onMouseOver={this.onHover.bind(this)} onClick={(ev) => this.setState({page: 2})}>
             <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
             <p id="shopping-cart-text">{this.state.cartQty} items</p>
           </div>
