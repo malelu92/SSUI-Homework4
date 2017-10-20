@@ -8,6 +8,7 @@ import dogHarnessTwo from './images/dog_harness2.jpg';
 import dogHarnessThree from './images/dog_harness3.png';
 import mainImage from './images/home_page_im1.jpg';
 
+
 class Main extends Component {
   constructor(props) {
 	super(props);
