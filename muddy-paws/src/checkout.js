@@ -15,13 +15,14 @@ class Checkout extends Component {
     var difProds = this.props.cartItems.length
     var items = [];
     for (var i = 0; i < difProds; i++) {
+      var prodTotalPrice = (this.props.cartItems[i][3])*(this.props.cartProdQtys[i]);
       items.push(    
         <div className={"screen-align"}>
           <img src={this.props.cartItems[i][0]} className={"prod-img-checkout"} alt="orange dog harness"></img>    
           <div className={"checkout-prod-info"}>
             <p className={"checkout-cart-prod"}>{this.props.cartItems[i][1]}</p>
             <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">{this.props.cartProdQtys[i]} items - <b>Remove</b></p>
-            <p className={"checkout-cart-prod"}>U$ {this.props.cartItems[i][3]}</p>
+            <p className={"checkout-cart-prod"}>U$ {prodTotalPrice}</p>
           </div>
         </div>
       );
