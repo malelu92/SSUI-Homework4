@@ -55,7 +55,7 @@ class Main extends Component {
 		  <p>HELPING ALL CATS AND DOGS LIVE TO THEIR FULL POTENTIAL</p>
 		</div>
 		<div className={"pop-prod"}>
-  		  <p>Most popular products:</p>
+  		  <p className={"pop-prod-text"}>Most popular products:</p>
   		  {this.renderInventory()}
 		</div>
 	  </div>
