@@ -80,8 +80,7 @@ class App extends Component {
           </div>
         </header>
         <div className="app-nav-bar">
-            <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >Products</div>
-            <div className = {"app-nav-link" + (this.state.page === 3 ? " active" : "")} onClick={(ev) => this.setState({page: 3})} >spec</div>
+            <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >PRODUCTS</div>
         </div>
         <p className="App-intro">
         </p>

@@ -23,8 +23,10 @@
 }
 
 .app-nav-link {
+  color: white;
   float: left;
-  margin-left: 10%;
+  margin-left: 4%;
+  margin-top: 0.3%;
 }
 
 .App-title {
@@ -101,7 +103,6 @@
 
 .filter-by {
   border:2px solid black;
-  float: left;
   font-size: 200%;
   margin-left: 10%;
   position: relative;
@@ -109,20 +110,17 @@
 
 .filter-opt {
   border:2px solid black;
-  float: left;
   font-size:130%;
   margin-left: 10%;
-  margin-top: 10%;
   position: relative;
   top: 10%;
 }
 
 .filter-opt-list {
+  align-self: flex-start;
   border:2px solid black;
-  float: left;
   font-size:130%;
   /*margin-left: 10%;*/
-  margin-top: 20%;
   position: relative;
   top: 10%;
 }
