@@ -56,35 +56,41 @@ class ProductInfo extends Component {
 
     	<div className={"screen-align"}>
       	  <p>Size</p>
-      	  <select id="size">
-        	<option value="tiny">Tiny</option>
-        	<option value="small">Small</option>
-        	<option value="medium">Medium</option>
-       		<option value="large">Large</option>
-      	  </select>
+          <div className={"sel-opt"}>
+      	    <select id="size">
+        	  <option value="tiny">Tiny</option>
+        	  <option value="small">Small</option>
+        	  <option value="medium">Medium</option>
+       		  <option value="large">Large</option>
+      	    </select>
+          </div>
     	</div>
 
     	<div className={"screen-align"}>
       	  <p>Color</p>
-      	  <select id="color">
-        	<option value="strawberry">strawberry</option>
-        	<option value="blackberry">blackberry</option>
-        	<option value="crazyberry">crazyberry</option>
-        	<option value="camouflage">camouflage</option>
-        	<option value="nightmoon">night moon</option>
-        	<option value="fireorange">fire orange</option>
-      	  </select>
+          <div className={"sel-opt"}>
+      	    <select id="color">
+        	  <option value="strawberry">strawberry</option>
+        	  <option value="blackberry">blackberry</option>
+        	  <option value="crazyberry">crazyberry</option>
+        	  <option value="camouflage">camouflage</option>
+        	  <option value="nightmoon">night moon</option>
+        	  <option value="fireorange">fire orange</option>
+      	    </select>
+          </div>
     	</div>
 
     	<div className={"screen-align"}>
       	  <p>Quantity</p>
-      	  <select id="quantity" onChange={this.handleChange}>
-        	<option value="1">1</option>
-        	<option value="2">2</option>
-        	<option value="3">3</option>
-        	<option value="4">4</option>
-        	<option value="5">5</option>
-      	  </select>
+          <div className={"sel-opt"}>
+      	    <select id="quantity" onChange={this.handleChange}>
+        	  <option value="1">1</option>
+        	  <option value="2">2</option>
+        	  <option value="3">3</option>
+        	  <option value="4">4</option>
+        	  <option value="5">5</option>
+      	    </select>
+          </div>
     	</div>
 
       <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>

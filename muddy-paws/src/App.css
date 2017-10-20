@@ -276,6 +276,12 @@
   width: 600px;
 }
 
+.sel-opt {
+  margin-left: 1.5%;
+  margin-top: 1.7%;
+  position: relative;
+}
+
 .shopping-cart {
   border:2px solid black;
   display: flex;
@@ -290,11 +296,12 @@
   width: 80px;
 }
 
-#shopping-cart-text {
+.shopping-cart-text {
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   padding: 20px;
-  top: 57px;
+  position: relative;
+  margin-top: 10%;
 }
 
 .stars-main-page {
