@@ -56,7 +56,6 @@
   background-color:#d2d420;
   border:2px solid #b2c49d;
   border-radius: 10px;
-  float: left;
   font-size: 20px;
   height: 50px;
   margin-left: 10%;
@@ -74,10 +73,10 @@
 }
 
 .checkout-cart-info {
-  float: left;
   font-size: 20px;
   margin-left: 10%;
   position: relative;
+  text-align: left;
 }
 
 .checkout-cart-prod {
@@ -296,12 +295,13 @@
   width: 80px;
 }
 
-.shopping-cart-text {
+#shopping-cart-text {
+  color: black;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   padding: 20px;
   position: relative;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .stars-main-page {
