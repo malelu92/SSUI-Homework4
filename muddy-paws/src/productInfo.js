@@ -50,12 +50,10 @@ class ProductInfo extends Component {
       	      <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
             customer review</p>
     	  </div>
-    	  <p>U$ 25,90</p>
-    	</div>
+    	  <p className={"prod-price"}>U$ 25,90</p>
 
     	<br></br>
 
-      <div className={"prod-opt"}>
     	<div className={"screen-align"}>
       	  <p>Size</p>
       	  <select id="size">
@@ -88,10 +86,9 @@ class ProductInfo extends Component {
         	<option value="5">5</option>
       	  </select>
     	</div>
-      </div>
 
       <input type="button" id="add-item" onClick={this.addToCart.bind(this)} className={"button-cart"} value="ADD TO CART"></input>
-
+  </div>
 	  </div>
 	);
   }

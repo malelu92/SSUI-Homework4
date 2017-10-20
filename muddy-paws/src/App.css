@@ -42,7 +42,6 @@
   font-size: 20px;
   height: 60px;
   margin-left: 10%;
-  margin-top: 30%;
   position:relative;
   width: 320px;
 }
@@ -216,8 +215,8 @@
   width: 75%;
 }
 
-.prod-opt {
-  margin-top: 40%;
+.prod-price {
+  font-size: 250%;
 }
 
 .screen-align {
@@ -234,10 +233,12 @@
 }
 
 .screen-spec-prod-l {
+  border:2px solid black;
   width: 50%;
 }
 
 .screen-spec-prod-r {
+  border:2px solid black;
   left: 60px;
   position: relative;
   width: 50%;
