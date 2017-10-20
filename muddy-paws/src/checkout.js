@@ -20,7 +20,7 @@ class Checkout extends Component {
           <img src={this.props.cartItems[i][0]} className={"prod-img-checkout"} alt="orange dog harness"></img>    
           <div className={"checkout-prod-info"}>
             <p className={"checkout-cart-prod"}>{this.props.cartItems[i][1]}</p>
-            <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
+            <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">{this.props.cartProdQtys[i]} items - <b>Remove</b></p>
             <p className={"checkout-cart-prod"}>U$ {this.props.cartItems[i][3]}</p>
           </div>
         </div>

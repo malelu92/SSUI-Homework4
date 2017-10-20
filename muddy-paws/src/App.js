@@ -18,6 +18,7 @@ class App extends Component {
       page: 0,
       cartQty: 0,
       cartItems: [],
+      cartProdQtys: [],
       prodSel: [],
       totalPrice: 0.00
     };
@@ -33,7 +34,8 @@ class App extends Component {
   updateCart(field, value) {
     var newQty = this.state.cartQty + value;
     this.setState({cartQty: newQty});
-    this.state.cartItems.push(this.state.prodSel)
+    this.state.cartItems.push(this.state.prodSel);
+    this.state.cartProdQtys.push(value);
     console.log(this.state.prodSel[1])
     console.log(this.state.cartItems[0][1])
   }
@@ -59,6 +61,7 @@ class App extends Component {
               cartQty={this.state.cartQty}
               totalPrice={this.state.totalPrice}
               cartItems={this.state.cartItems}
+              cartProdQtys={this.state.cartProdQtys}
               />
     if(this.state.page === 3)
       return <ProductInfo 
