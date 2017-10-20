@@ -21,37 +21,37 @@ import fiveStars from'./images/five_stars.png';
 class Products extends Component {
   constructor(props) {
 	super(props);
-	var dogHarness1 = {image: dogHarnessOne, altText: "dog harness", description: "$22 dog harness"};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "dog harness2", description: "$23 dog harness"};
-	var dogHarness3 = {image: dogHarnessThree, altText: "dog harness3", description: "$20 dog harness"};
-	var dogHarness4 = {image: dogHarnessFour, altText: "dog harness4", description: "$23 dog harness"};
-	var dogHarness5 = {image: dogHarnessFive, altText: "dog harness5", description: "$23 dog harness"};
-	var dogHarness6 = {image: dogHarnessSix, altText: "dog harness6", description: "$23 dog harness"};
+	var dogHarness1 = {image: dogHarnessOne, altText: "dog harness", description: "$22 dog harness", prodId: 1};
+	var dogHarness2 = {image: dogHarnessTwo, altText: "dog harness2", description: "$23 dog harness", prodId: 2};
+	var dogHarness3 = {image: dogHarnessThree, altText: "dog harness3", description: "$20 dog harness", prodId: 3};
+	var dogHarness4 = {image: dogHarnessFour, altText: "dog harness4", description: "$23 dog harness", prodId: 4};
+	var dogHarness5 = {image: dogHarnessFive, altText: "dog harness5", description: "$23 dog harness", prodId: 5};
+	var dogHarness6 = {image: dogHarnessSix, altText: "dog harness6", description: "$23 dog harness", prodId: 6};
 	var dog_gps = {image: dogGPS, altText: "dog gps", description: "$23 dog gps"};
 	var catHarness1 = {image: catHarnessOne, altText: "cat harness1", description: "$23 cat harness"};
 
 	this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, dogHarness4, dogHarness5, dogHarness6, dog_gps, catHarness1],
-      detail: null,
+      /*detail: null,*/
     }
     this.selectItem = this.selectItem.bind(this);
   }
 
-  renderProductInfo() {
+  /*renderProductInfo() {
   	console.log(this.state.detail)
     if(this.state.detail !== null)
     {
     	console.log("clicou")
       return <ProductInfo/>
     }
-  }
+  }*/
 
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id]
-    var prodInfo = <productInfo onClose = {(ev) => this.setState({detail: null})} image = {item.image} altText = {item.altText} description = {item.description} />
+    var prodInfo = <productInfo image = {item.image} altText = {item.altText} description = {item.description} prodId = {item.prodId} />
     this.props.updatePage('page', 3);
-    this.setState({detail: prodInfo})
+    {/*this.setState({detail: prodInfo})*/}
     {/*this.renderProductInfo();*/}
   }
 
@@ -144,7 +144,6 @@ class Products extends Component {
             {elements[3]}
             {elements[4]}
             {elements[5]}
-            {this.renderProductInfo()}
           </div>
         </div>
       </div>

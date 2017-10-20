@@ -17,7 +17,8 @@ class App extends Component {
     this.state = {
       page: 0,
       cartQty: 0,
-      cartItems: []
+      cartItems: [],
+      prodSel: {}
     };
     this.updateCart = this.updateCart.bind(this);
     this.updatePage = this.updatePage.bind(this);
@@ -35,7 +36,6 @@ class App extends Component {
   }
 
   updatePage(field, value) {
-    /*var newPage = value;*/
     this.setState({page: value});
     this.renderPageView();
     /*console.log("parent");*/
