@@ -10,9 +10,9 @@ class StoreItem extends Component{
   render() {
     return (
       <div className="productWrapper" onClick = {this.props.onClick}>
-        <img className="prod-img" src={this.props.image} alt={this.props.altText} />
-        <div className="productLabel">{this.props.price}</div>
-        <div className="productLabel">{this.props.description}</div>
+        <img className="prod-img" src={this.props.image} />
+        <div className="productLabel">{this.props.altText}</div>
+        <div className="productLabel">U$ {this.props.price}</div>
       </div>
     );
   }

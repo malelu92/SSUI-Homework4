@@ -10,11 +10,6 @@ import Products from './products.js';
 import ProductInfo from './productInfo.js';
 import CartHover from './cartHover.js';
 
-
-
-
-import dogHarnessOne from './images/dog_harness1.jpg';
-
 class App extends Component {
 
   constructor(props) {

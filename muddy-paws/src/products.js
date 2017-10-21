@@ -21,14 +21,14 @@ import fiveStars from'./images/five_stars.png';
 class Products extends Component {
   constructor(props) {
 	super(props);
-	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22.50 dog harness", price: "22.50"};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$25.99 dog harness",  price: "25.99"};
-	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$15.00 dog harness", price: "15.00"};
-	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "$20.90 dog harness", price: "20.90"};
-	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "$30 dog harness", price: "30.00"};
-	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "$14.50 dog harness", price: "14.50"};
-	var dog_gps = {image: dogGPS, altText: "Dog GPS", description: "$23 dog gps", price: "50.00"};
-	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "$23 cat harness", price: "20.90"};
+	var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
+	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "Dog harness specially made for your dog.",  price: "25.99"};
+	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "Dog harness that keeps it simple", price: "15.00"};
+	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "Your dog will look super badass", price: "20.90"};
+	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "Perfect for the Big Apple dogs", price: "30.00"};
+	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "The ultimate dog harness", price: "14.50"};
+	var dog_gps = {image: dogGPS, altText: "Dog GPS", description: "The best and most famous dog GPS comes back in version 2.0", price: "50.00"};
+	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "Cat harness for outdoor cats", price: "20.90"};
 
 	this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, dogHarness4, dogHarness5, dogHarness6, dog_gps, catHarness1],
@@ -79,7 +79,7 @@ class Products extends Component {
     for(var i=0; i < this.state.inventory.length; i++)
     {
       var item = this.state.inventory[i]
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} price = {item.price} />)
     }
     return (
       <div className={"screen-align"}>

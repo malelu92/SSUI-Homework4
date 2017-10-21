@@ -12,10 +12,10 @@ import mainImage from './images/home_page_im1.jpg';
 class Main extends Component {
   constructor(props) {
 	  super(props);
-	  var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22.50 dog harness", price: "22.50"};
-	  var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$25.99 dog harness", price: "25.99"};
-	  var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "$15.00 dog harness", price: "15.00"};
-	  var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "$20.90 cat harness", price: "20.90"};
+	  var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
+	  var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "Dog harness specially made for your dog.", price: "25.99"};
+	  var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "Dog harness that keeps it simple", price: "15.00"};
+	  var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "Cat harness for outdoor cats", price: "20.90"};
 
 	  this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],
@@ -38,7 +38,7 @@ class Main extends Component {
     for(var i=0; i < this.state.inventory.length; i++)
     {
       var item = this.state.inventory[i]
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} price = {item.price} />)
     }
     return (
       <div className={"prods-display"}>
