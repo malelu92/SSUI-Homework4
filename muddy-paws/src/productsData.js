@@ -7,7 +7,7 @@ class ProductsData {
     this.images = data.images;
     this.names = data.names;
     this.descriptions = data.descriptions;
-    this.prices = this.prices;
+    this.prices = data.prices;
   }
 }
 

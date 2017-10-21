@@ -13,35 +13,38 @@ import mainImage from './images/home_page_im1.jpg';
 class Main extends Component {
   constructor(props) {
 	  super(props);
-	  var dogHarness1 = {image: dogHarnessOne, altText: ProductsData.names[1], description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
-	  var dogHarness2 = {image: dogHarnessTwo, altText: ProductsData.names[2], description: "Dog harness specially made for your dog.", price: "25.99"};
-	  var dogHarness3 = {image: dogHarnessThree, altText: ProductsData.names[3], description: "Dog harness that keeps it simple", price: "15.00"};
-	  var catHarness1 = {image: catHarnessOne, altText: ProductsData.names[0], description: "Cat harness for outdoor cats", price: "20.90"};
-
+	  {/*var dogHarness1 = {image: dogHarnessOne, altText: ProductsData.names[1], description: ProductsData.descriptions[1], price: ProductsData.prices[1]};
+	  var dogHarness2 = {image: dogHarnessTwo, altText: ProductsData.names[2], description: ProductsData.descriptions[2], price: ProductsData.prices[2]};
+	  var dogHarness3 = {image: dogHarnessThree, altText: ProductsData.names[3], description: ProductsData.descriptions[3], price: ProductsData.prices[3]};
+	  var catHarness1 = {image: catHarnessOne, altText: ProductsData.names[0], description: ProductsData.descriptions[0], price: ProductsData.prices[0]};*/}
+    var images = [];
+    images.push(ProductsData.images[0]);
+    var prodImage;
 	  this.state = {
-      inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],
+      itemsShown: 4,
+      inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree],
     }
     this.selectItem = this.selectItem.bind(this);
+    {/*inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],*/}
   }
 
   selectItem(id) {
-    var item = this.state.inventory[id];
+    {/*var item = this.state.inventory[id];*/}
     var prodInfo = [];
-    prodInfo.push(item.image);
-    prodInfo.push(item.altText);
-    prodInfo.push(item.description);
-    prodInfo.push(item.price);
+    prodInfo.push(this.state.inventory[id]);
+    prodInfo.push(ProductsData.names[id]);
+    prodInfo.push(ProductsData.descriptions[id]);
+    prodInfo.push(ProductsData.prices[id]);
     this.props.updatePage('prodSel', prodInfo);
-    console.log("*******")
-    console.log(ProductsData.names[1])
   }
 
   renderInventory() {
+    const imageSource = ProductsData.images[0];
     var elements = []
-    for(var i=0; i < this.state.inventory.length; i++)
+    for(var i=0; i < this.state.itemsShown; i++)
     {
-      var item = this.state.inventory[i]
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} price = {item.price} />)
+      {/*var item = this.state.inventory[i]*/}
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} />)
     }
     return (
       <div className={"prods-display"}>
