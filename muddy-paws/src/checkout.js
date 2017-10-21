@@ -35,8 +35,7 @@ class Checkout extends Component {
     var difProds = this.props.cartItems.length
     var items = [];
     var contTotal = 0;
-    this.props.removeCart('cartQty', this.props.cartProdQtys[id]);
-    this.props.cartItems[id].pop();
+    this.props.removeCart('cartQty', id);
     this.render();
     {/*this.props.cartProdQtys[id].pop();
     for (var i = 0; i < difProds; i++) {
