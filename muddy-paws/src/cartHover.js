@@ -7,11 +7,15 @@ class CartHover extends Component {
   }
 
   render() {
-  	console.log("hover page")
-  	console.log(this.props.alt)
+  	var totalPrice = 0;
+    if(this.props.cartProdQtys) {
+      for (var i=0; i < this.props.cartProdQtys.length; i++) {
+        totalPrice += this.props.cartProdQtys[i]*this.props.cartItems[i][3];
+      }
+    }
 	return (
 	  <div id="cart-window">
-	  	<p> Total price: {this.props.totPrice}</p>
+	  	<p> Total price: {totalPrice}</p>
 	  <img className="prod-img" src={this.props.image} />
 	  </div>
 	);

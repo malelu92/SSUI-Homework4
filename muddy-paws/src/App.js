@@ -33,13 +33,7 @@ class App extends Component {
   }
 
   onHover() {
-    var totalPrice = 0;
-    if(this.state.cartProdQtys) {
-      for (var i=0; i < this.state.cartProdQtys.length; i++) {
-        totalPrice += this.state.cartProdQtys[i]*this.state.cartItems[i][3];
-      }
-    }
-    var cartHover = <CartHover totPrice = {totalPrice} image = {dogHarnessOne}/>
+    var cartHover = <CartHover cartProdQtys = {this.state.cartProdQtys} cartItems = {this.state.cartItems}/>
     this.setState({cartWindow: cartHover});
   }
 
