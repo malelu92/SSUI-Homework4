@@ -22,42 +22,21 @@ import fiveStars from'./images/five_stars.png';
 class Products extends Component {
   constructor(props) {
 	super(props);
-	{/*var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
-	var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "Dog harness specially made for your dog.",  price: "25.99"};
-	var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "Dog harness that keeps it simple", price: "15.00"};
-	var dogHarness4 = {image: dogHarnessFour, altText: "Dog Harness Military", description: "Your dog will look super badass.", price: "20.90"};
-	var dogHarness5 = {image: dogHarnessFive, altText: "Dog Harness NY", description: "Perfect for the Big Apple dogs", price: "30.00"};
-	var dogHarness6 = {image: dogHarnessSix, altText: "Dog Harness My Dog", description: "The ultimate dog harness", price: "14.50"};
-	var dog_gps = {image: dogGPS, altText: "Dog GPS", description: "The best and most famous dog GPS comes back in version 2.0", price: "50.00"};
-	var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "Cat harness for outdoor cats", price: "20.90"};*/}
-
 	this.state = {
       inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree, dogHarnessFour, dogHarnessFive, dogHarnessSix, dogGPS],
     }
     this.selectItem = this.selectItem.bind(this);
   }
 
-  /*renderProductInfo() {
-  	console.log(this.state.detail)
-    if(this.state.detail !== null)
-    {
-    	console.log("clicou")
-      return <ProductInfo/>
-    }
-  }*/
-
   selectItem(id) {
     console.log("selected ",id)
     var item = this.state.inventory[id]
-    {/*var prodInfo = <productInfo image = {item.image} altText = {item.altText} description = {item.description} prodId = {item.prodId} />*/}
     var prodInfo = [];
     prodInfo.push(this.state.inventory[id]);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
     this.props.updatePage('prodSel', prodInfo);
-    {/*this.setState({detail: prodInfo})*/}
-    {/*this.renderProductInfo();*/}
   }
 
   createProductDivs(elements) {
