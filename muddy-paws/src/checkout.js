@@ -38,12 +38,7 @@ class Checkout extends Component {
       elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} price = {item.price}/>)
       suggestedProds.push(
         <div className={"screen-align"}>
-          <img src={item.image} className={"prod-img-checkout"} alt="orange dog harness"></img>
-          <div>
-            <p>{item.altText}</p>
-            <p>U$ {item.price}</p>
-            <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
-          </div>
+          <div>{elements[i]}</div>
         </div>
       );
     }

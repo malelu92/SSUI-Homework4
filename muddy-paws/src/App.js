@@ -53,7 +53,6 @@ class App extends Component {
     this.setState({page: 3});
     this.setState({prodSel: value});
     this.renderPageView();
-    /*console.log("parent");*/
   }
 
   renderPageView() {
@@ -70,6 +69,7 @@ class App extends Component {
               cartQty={this.state.cartQty}
               cartItems={this.state.cartItems}
               cartProdQtys={this.state.cartProdQtys}
+              updatePage={this.updatePage}
               />
     if(this.state.page === 3)
       return <ProductInfo 
