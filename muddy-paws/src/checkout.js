@@ -1,17 +1,57 @@
 import React, { Component } from 'react';
 import './App.css'
+import StoreItem from './storeItem.js';
 
 import dogHarnessOne from './images/dog_harness1.jpg';
 import dogHarnessTwo from './images/dog_harness2.jpg';
-import dogHarnessThree from './images/dog_harness3.png';
 import fiveStars from './images/five_stars.png';
 
 class Checkout extends Component {
   constructor(props) {
 	  super(props);
+    var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22.50 dog harness", price: "22.50"};
+    var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$25.99 dog harness", price: "25.99"};
+
     this.state = {
       totalPrice: 0,
+      inventory: [dogHarness1, dogHarness2],
     };
+    this.selectItem = this.selectItem.bind(this);
+  }
+
+  selectItem(id) {
+    var item = this.state.inventory[id];
+    var prodInfo = [];
+    prodInfo.push(item.image);
+    prodInfo.push(item.altText);
+    prodInfo.push(item.description);
+    prodInfo.push(item.price);
+    this.props.updatePage('prodSel', prodInfo);
+  }
+
+  renderInventory() {
+    var suggestedProds = [];
+    var elements = []
+    for(var i=0; i < this.state.inventory.length; i++)
+    {
+      var item = this.state.inventory[i]
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} price = {item.price}/>)
+      suggestedProds.push(
+        <div className={"screen-align"}>
+          <img src={item.image} className={"prod-img-checkout"} alt="orange dog harness"></img>
+          <div>
+            <p>{item.altText}</p>
+            <p>U$ {item.price}</p>
+            <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div>
+        {suggestedProds}
+      </div>
+    )
   }
 
   renderProducts() {
@@ -65,22 +105,7 @@ class Checkout extends Component {
     		</div>
     		<input type="button" className="button-cart checkout" value="CHECKOUT"></input>
     		<p className={"checkout-cart-info"}>You might also like:</p>
-    		<div className={"screen-align"}>
-        	  <img src={dogHarnessTwo} className={"prod-img-checkout"} alt="orange dog harness"></img>
-      		  <div>
-        		<p>Coastal Harness</p>
-        		<p>U$ 21,90</p>
-        		<img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
-      		  </div>
-    		</div>
-    		<div className={"screen-align"}>
-        	  <img src={dogHarnessThree} className={"prod-img-checkout"} alt="orange dog harness"></img>
-      		  <div>
-        		<p>Coastal Harness</p>
-        		<p>U$ 22,90</p>
-        		<img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
-      		  </div>
-    		</div>
+    		{this.renderInventory()}
 		  </div>
 		</div>
 	  </div>
