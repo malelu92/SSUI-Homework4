@@ -1,45 +1,38 @@
 import React, { Component } from 'react';
 import './App.css'
+import ProductsData from './productsData.js';
 import StoreItem from './storeItem.js';
 
+import catHarnessOne from './images/cat_harness1.jpg';
 import dogHarnessOne from './images/dog_harness1.jpg';
-import dogHarnessTwo from './images/dog_harness2.jpg';
 import fiveStars from './images/five_stars.png';
 
 class Checkout extends Component {
   constructor(props) {
 	  super(props);
-    var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "$22.50 dog harness", price: "22.50"};
-    var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "$25.99 dog harness", price: "25.99"};
-
     this.state = {
       totalPrice: 0,
-      inventory: [dogHarness1, dogHarness2],
+      inventory: [catHarnessOne, dogHarnessOne],
     };
     this.selectItem = this.selectItem.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   selectItem(id) {
-    var item = this.state.inventory[id];
     var prodInfo = [];
-    prodInfo.push(item.image);
-    prodInfo.push(item.altText);
-    prodInfo.push(item.description);
-    prodInfo.push(item.price);
+    prodInfo.push(this.state.inventory[id]);
+    prodInfo.push(ProductsData.names[id]);
+    prodInfo.push(ProductsData.descriptions[id]);
+    prodInfo.push(ProductsData.prices[id]);
     this.props.updatePage('prodSel', prodInfo);
   }
 
   removeFromCart(id) {
-    console.log("remove")
     var difProds = this.props.cartItems.length
     var items = [];
     var contTotal = 0;
     this.props.removeCart('cartQty', id);
     this.render();
-    {/*this.props.cartProdQtys[id].pop();
-    for (var i = 0; i < difProds; i++) {
-    }*/}
   }
 
   renderInventory() {
@@ -47,8 +40,7 @@ class Checkout extends Component {
     var elements = []
     for(var i=0; i < this.state.inventory.length; i++)
     {
-      var item = this.state.inventory[i]
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {item.image} altText = {item.altText} description = {item.description} price = {item.price}/>)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]}/>)
       suggestedProds.push(
         <div className={"screen-align"}>
           <div>{elements[i]}</div>
