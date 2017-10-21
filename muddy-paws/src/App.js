@@ -28,6 +28,11 @@ class App extends Component {
 
   onHover() {
     console.log("hover")
+    this.renderHoverView()
+  }
+
+  renderHoverView() {
+    <div>lala</div>
   }
 
   updateCart(field, value) {
@@ -45,8 +50,6 @@ class App extends Component {
       this.state.cartItems.push(this.state.prodSel);
       this.state.cartProdQtys.push(value);
     }
-    console.log(this.state.prodSel[1])
-    console.log(this.state.cartItems[0][1])
   }
 
   updatePage(field, value) {
