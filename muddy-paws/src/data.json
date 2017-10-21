@@ -1,5 +1,5 @@
 {
-  "image": [
+  "images": [
     "./images/cat_harness1.jpg",
     "./images/dog_harness1.jpg",
     "./images/dog_harness2.jpg",
@@ -14,7 +14,7 @@
     "./images/four_stars.jpg",
     "./images/five_stars.png",
   ],
-  "name": [
+  "names": [
     "Cat Harness 2000",
     "Dog Harness 3000",
     "Dog Harness XYZ",
@@ -23,7 +23,7 @@
     "Dog Harness My Dog",
     "Dog GPS"
   ],
-  "price": [
+  "prices": [
     "20.90",
     "22.50",
     "25.99",
@@ -33,7 +33,7 @@
     "14.50",
     "50.00"
   ],
-  "description": [
+  "descriptions": [
     "Cat harness for outdoor cats.",
     "Dog harness perfect for adventurous dogs.",
     "Dog harness specially made for your dog.",
