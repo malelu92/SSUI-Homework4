@@ -8,7 +8,12 @@ import Checkout from './checkout.js';
 import Main from './main.js';
 import Products from './products.js';
 import ProductInfo from './productInfo.js';
-import ShoppingCart from './shoppingCart.js';
+import CartHover from './cartHover.js';
+
+
+
+
+import dogHarnessOne from './images/dog_harness1.jpg';
 
 class App extends Component {
 
@@ -20,6 +25,7 @@ class App extends Component {
       cartItems: [],
       cartProdQtys: [],
       prodSel: [],
+      cartWindow: null,
     };
     this.updateCart = this.updateCart.bind(this);
     this.updatePage = this.updatePage.bind(this);
@@ -28,11 +34,20 @@ class App extends Component {
 
   onHover() {
     console.log("hover")
-    this.renderHoverView()
+    var cartHover = <CartHover alt = {"lala"} image = {dogHarnessOne}/>
+    this.setState({cartWindow: cartHover});
+    {/*return <cartHover/>*/}
   }
 
-  renderHoverView() {
-    <div>lala</div>
+  offHover() {
+    this.setState({cartWindow: null});
+    {/*return <cartHover/>*/}
+  }
+
+  renderCartHover() {
+    if(this.state.cartWindow !== null) {
+      return this.state.cartWindow;
+    }
   }
 
   updateCart(field, value) {
@@ -92,10 +107,11 @@ class App extends Component {
             <input type="button" className={"button-search"} value="Search"/>
           </div>
           {/* -------shopping cart icon-------- */}
-          <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onMouseOver={this.onHover.bind(this)} onClick={(ev) => this.setState({page: 2})}>
+          <div className={"shopping-cart" + (this.state.page === 2 ? " active" : "")} onMouseOver={this.onHover.bind(this)} onMouseOut={this.offHover.bind(this)} onClick={(ev) => this.setState({page: 2})}>
             <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
             <p id="shopping-cart-text">{this.state.cartQty} items</p>
           </div>
+          {this.renderCartHover()}
         </header>
         <div className="app-nav-bar">
             <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >PRODUCTS</div>
