@@ -8,14 +8,19 @@ import fiveStars from './images/five_stars.png';
 
 class Checkout extends Component {
   constructor(props) {
-	super(props);
+	  super(props);
+    this.state = {
+      totalPrice: 0,
+    };
   }
 
   renderProducts() {
     var difProds = this.props.cartItems.length
     var items = [];
+    var contTotal = 0;
     for (var i = 0; i < difProds; i++) {
       var prodTotalPrice = (this.props.cartItems[i][3])*(this.props.cartProdQtys[i]);
+      contTotal += prodTotalPrice;
       items.push(    
         <div className={"screen-align"}>
           <img src={this.props.cartItems[i][0]} className={"prod-img-checkout"} alt="orange dog harness"></img>    
@@ -27,22 +32,12 @@ class Checkout extends Component {
         </div>
       );
     }
+    this.state.totalPrice = contTotal;
     return (
     <div>
       {items}
     </div>
     );
-    {/*
-    return (
-      <div className={"screen-align"}>
-        <img src={dogHarnessOne} className={"prod-img-checkout"} alt="orange dog harness"></img>
-        <div className={"checkout-prod-info"}>
-          <p className={"checkout-cart-prod"}>Coastal Harness</p>
-          <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">1 item - <b>Remove</b></p>
-          <p className={"checkout-cart-prod"}>U$ 21,90</p>
-        </div>
-      </div>
-    );*/}
   }
 
   render() {
@@ -59,14 +54,14 @@ class Checkout extends Component {
     		<div>
           {this.renderProducts()}
       		<hr></hr>
-      		<p className={"total-price"}>Total U$ {this.props.totalPrice}</p>
+      		<p className={"total-price"}>Total U$ {this.state.totalPrice}</p>
     		</div>
 		  </div>
 		  <div className={"vertical-line"}></div>
 		  <div className={"screen-checkout-r"}>
 		    <div className={"checkout-cart-info"}>
       		  <p>{this.props.cartQty} items</p>
-      		  <p>Total U$ {this.props.totalPrice}</p>
+      		  <p>Total U$ {this.state.totalPrice}</p>
     		</div>
     		<input type="button" className="button-cart checkout" value="CHECKOUT"></input>
     		<p className={"checkout-cart-info"}>You might also like:</p>
