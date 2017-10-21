@@ -1,0 +1,46 @@
+{
+  "image": [
+    "./images/cat_harness1.jpg",
+    "./images/dog_harness1.jpg",
+    "./images/dog_harness2.jpg",
+    "./images/dog_harness3.png",
+    "./images/dog_harness4.png",
+    "./images/dog_harness5.png",
+    "./images/dog_harness6.png",
+    "./images/dogGPS.jpg",
+    "./images/one_star.jpg",
+    "./images/two_stars.jpg",
+    "./images/three_stars.jpg",
+    "./images/four_stars.jpg",
+    "./images/five_stars.png",
+  ],
+  "name": [
+    "Cat Harness 2000",
+    "Dog Harness 3000",
+    "Dog Harness XYZ",
+    "Dog Harness Military",
+    "Dog Harness NY",
+    "Dog Harness My Dog",
+    "Dog GPS"
+  ],
+  "price": [
+    "20.90",
+    "22.50",
+    "25.99",
+    "15.00",
+    "20.90",
+    "30.00",
+    "14.50",
+    "50.00"
+  ],
+  "description": [
+    "Cat harness for outdoor cats.",
+    "Dog harness perfect for adventurous dogs.",
+    "Dog harness specially made for your dog.",
+    "Dog harness that keeps it simple.",
+    "Your dog will look super badass.",
+    "Perfect for the Big Apple dogs.",
+    "The ultimate dog harness.",
+    "The best and most famous dog GPS comes back in version 2.0"
+  ]
+}
