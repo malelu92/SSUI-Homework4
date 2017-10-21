@@ -11,10 +11,12 @@ class CartHover extends Component {
   	var itemTotalPrice = 0;
   	var items = [];
     if(this.props.cartProdQtys) {
+      {/* calculates total price*/}
       for (var i=0; i < this.props.cartProdQtys.length; i++) {
       	itemTotalPrice = this.props.cartProdQtys[i]*this.props.cartItems[i][3];
         totalPrice += itemTotalPrice;
 
+      {/* push products to cart window*/}
       	items.push(    
       	  <div className={"screen-align"}>
             <img id="prod-img-cart" src={this.props.cartItems[i][0]} />
