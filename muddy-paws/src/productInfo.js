@@ -51,6 +51,7 @@ class ProductInfo extends Component {
             customer review</p>
     	  </div>
     	  <p className={"prod-price"}>U$ {this.props.prodSel[3]}</p>
+        <p>{this.props.prodSel[2]}</p>
 
     	<br></br>
 
