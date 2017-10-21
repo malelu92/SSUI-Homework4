@@ -11,4 +11,4 @@ class ProductsData {
   }
 }
 
-export default ProductsData;
+export default (new ProductsData());

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css'
 import StoreItem from './storeItem.js';
+import ProductsData from './productsData.js';
 
 import catHarnessOne from './images/cat_harness1.jpg';
 import dogHarnessOne from './images/dog_harness1.jpg';
@@ -12,10 +13,10 @@ import mainImage from './images/home_page_im1.jpg';
 class Main extends Component {
   constructor(props) {
 	  super(props);
-	  var dogHarness1 = {image: dogHarnessOne, altText: "Dog Harness 3000", description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
-	  var dogHarness2 = {image: dogHarnessTwo, altText: "Dog Harness Coastal", description: "Dog harness specially made for your dog.", price: "25.99"};
-	  var dogHarness3 = {image: dogHarnessThree, altText: "Dog Harness XYZ", description: "Dog harness that keeps it simple", price: "15.00"};
-	  var catHarness1 = {image: catHarnessOne, altText: "Cat Harness 2000", description: "Cat harness for outdoor cats", price: "20.90"};
+	  var dogHarness1 = {image: dogHarnessOne, altText: ProductsData.names[1], description: "Dog harness perfect for adventurous dogs.", price: "22.50"};
+	  var dogHarness2 = {image: dogHarnessTwo, altText: ProductsData.names[2], description: "Dog harness specially made for your dog.", price: "25.99"};
+	  var dogHarness3 = {image: dogHarnessThree, altText: ProductsData.names[3], description: "Dog harness that keeps it simple", price: "15.00"};
+	  var catHarness1 = {image: catHarnessOne, altText: ProductsData.names[0], description: "Cat harness for outdoor cats", price: "20.90"};
 
 	  this.state = {
       inventory: [dogHarness1, dogHarness2, dogHarness3, catHarness1],
@@ -31,6 +32,8 @@ class Main extends Component {
     prodInfo.push(item.description);
     prodInfo.push(item.price);
     this.props.updatePage('prodSel', prodInfo);
+    console.log("*******")
+    console.log(ProductsData.names[1])
   }
 
   renderInventory() {
