@@ -32,9 +32,19 @@ class App extends Component {
 
   updateCart(field, value) {
     var newQty = this.state.cartQty + value;
+    var prodFound = false;
     this.setState({cartQty: newQty});
-    this.state.cartItems.push(this.state.prodSel);
-    this.state.cartProdQtys.push(value);
+    for (var i = 0; i < this.state.cartItems.length; i++) {
+      {/* product already on cart*/}
+      if(this.state.prodSel[1] == this.state.cartItems[i][1]) {
+        this.state.cartProdQtys[i] += value;
+        prodFound = true;
+      }
+    }
+    if (!prodFound) {
+      this.state.cartItems.push(this.state.prodSel);
+      this.state.cartProdQtys.push(value);
+    }
     console.log(this.state.prodSel[1])
     console.log(this.state.cartItems[0][1])
   }
