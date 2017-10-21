@@ -9,6 +9,12 @@ import dogHarnessTwo from './images/dog_harness2.jpg';
 import dogHarnessThree from './images/dog_harness3.png';
 import mainImage from './images/home_page_im1.jpg';
 
+import oneStar from'./images/one_star.jpg';
+import twoStars from'./images/two_stars.jpg';
+import threeStars from'./images/three_stars.jpg';
+import fourStars from'./images/four_stars.jpg';
+import fiveStars from'./images/five_stars.png';
+
 
 class Main extends Component {
   constructor(props) {
@@ -16,6 +22,7 @@ class Main extends Component {
 	  this.state = {
       itemsShown: 4,
       inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree],
+      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
     }
     this.selectItem = this.selectItem.bind(this);
   }
@@ -34,7 +41,7 @@ class Main extends Component {
     var elements = []
     for(var i=0; i < this.state.itemsShown; i++)
     {
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
     }
     return (
       <div className={"prods-display"}>

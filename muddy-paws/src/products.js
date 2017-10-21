@@ -24,6 +24,7 @@ class Products extends Component {
 	super(props);
 	this.state = {
       inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree, dogHarnessFour, dogHarnessFive, dogHarnessSix, dogGPS],
+      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
     }
     this.selectItem = this.selectItem.bind(this);
   }
@@ -36,6 +37,7 @@ class Products extends Component {
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
+    prodInfo.push(this.state.stars[3]);
     this.props.updatePage('prodSel', prodInfo);
   }
 
@@ -58,7 +60,7 @@ class Products extends Component {
     for(var i=0; i < this.state.inventory.length; i++)
     {
       {/*var item = this.state.inventory[i]*/}
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
     }
     return (
       <div className={"screen-align"}>

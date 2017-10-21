@@ -5,7 +5,11 @@ import StoreItem from './storeItem.js';
 
 import catHarnessOne from './images/cat_harness1.jpg';
 import dogHarnessOne from './images/dog_harness1.jpg';
-import fiveStars from './images/five_stars.png';
+import oneStar from'./images/one_star.jpg';
+import twoStars from'./images/two_stars.jpg';
+import threeStars from'./images/three_stars.jpg';
+import fourStars from'./images/four_stars.jpg';
+import fiveStars from'./images/five_stars.png';
 
 class Checkout extends Component {
   constructor(props) {
@@ -13,6 +17,7 @@ class Checkout extends Component {
     this.state = {
       totalPrice: 0,
       inventory: [catHarnessOne, dogHarnessOne],
+      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
     };
     this.selectItem = this.selectItem.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
@@ -40,7 +45,7 @@ class Checkout extends Component {
     var elements = []
     for(var i=0; i < this.state.inventory.length; i++)
     {
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]}/>)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]}/>)
       suggestedProds.push(
         <div className={"screen-align"}>
           <div>{elements[i]}</div>

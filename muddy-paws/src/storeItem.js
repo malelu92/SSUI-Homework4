@@ -13,6 +13,7 @@ class StoreItem extends Component{
         <img className="prod-img" src={this.props.image} />
         <div className="productLabel">{this.props.altText}</div>
         <div className="productLabel">U$ {this.props.price}</div>
+        <img className = {"stars-main-page"} src={this.props.star}/>
       </div>
     );
   }
