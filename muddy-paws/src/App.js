@@ -30,6 +30,7 @@ class App extends Component {
     this.updateCart = this.updateCart.bind(this);
     this.updatePage = this.updatePage.bind(this);
     this.onHover = this.onHover.bind(this);
+    this.removeCart = this.removeCart.bind(this);
   }
 
   onHover() {
@@ -64,6 +65,11 @@ class App extends Component {
     }
   }
 
+  removeCart(field, value) {
+    var newQty = this.state.cartQty - value;
+    this.setState({cartQty: newQty});
+  }
+
   updatePage(field, value) {
     this.setState({page: 3});
     this.setState({prodSel: value});
@@ -85,6 +91,7 @@ class App extends Component {
               cartItems={this.state.cartItems}
               cartProdQtys={this.state.cartProdQtys}
               updatePage={this.updatePage}
+              removeCart={this.removeCart}
               />
     if(this.state.page === 3)
       return <ProductInfo 

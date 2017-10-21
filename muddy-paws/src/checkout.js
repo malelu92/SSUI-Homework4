@@ -17,6 +17,7 @@ class Checkout extends Component {
       inventory: [dogHarness1, dogHarness2],
     };
     this.selectItem = this.selectItem.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   selectItem(id) {
@@ -27,6 +28,19 @@ class Checkout extends Component {
     prodInfo.push(item.description);
     prodInfo.push(item.price);
     this.props.updatePage('prodSel', prodInfo);
+  }
+
+  removeFromCart(id) {
+    console.log("remove")
+    var difProds = this.props.cartItems.length
+    var items = [];
+    var contTotal = 0;
+    this.props.removeCart('cartQty', this.props.cartProdQtys[id]);
+    this.props.cartItems[id].pop();
+    this.render();
+    {/*this.props.cartProdQtys[id].pop();
+    for (var i = 0; i < difProds; i++) {
+    }*/}
   }
 
   renderInventory() {
@@ -61,7 +75,7 @@ class Checkout extends Component {
           <img src={this.props.cartItems[i][0]} className={"prod-img-checkout"} alt="orange dog harness"></img>    
           <div className={"checkout-prod-info"}>
             <p className={"checkout-cart-prod"}>{this.props.cartItems[i][1]}</p>
-            <p className={"checkout-cart-prod"} onclick="removeFromCart(this)">{this.props.cartProdQtys[i]} items - <b>Remove</b></p>
+            <p className={"checkout-cart-prod"} onClick={this.removeFromCart.bind(this, i)}>{this.props.cartProdQtys[i]} items - <b>Remove</b></p>
             <p className={"checkout-cart-prod"}>U$ {prodTotalPrice}</p>
           </div>
         </div>
