@@ -68,12 +68,14 @@ class App extends Component {
   removeCart(field, id) {
     var newQty = this.state.cartQty - this.state.cartProdQtys[id];
     this.setState({cartQty: newQty});
-    console.log("rem")
-    console.log(this.state.cartItems[id][1])
+
     var newCart = this.state.cartItems.slice();
     newCart.splice(id, 1);
     this.setState({cartItems: newCart});
-    console.log(this.state.cartItems.length)
+
+    var newProdQty = this.state.cartProdQtys.slice();
+    newProdQty.splice(id, 1);
+    this.setState({cartProdQtys: newProdQty});
   }
 
   updatePage(field, value) {
