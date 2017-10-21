@@ -15,18 +15,18 @@ class CartHover extends Component {
 
       	items.push(    
       	  <div className={"screen-align"}>
-            <img className="prod-img" src={this.props.cartItems[i][0]} />
+            <img id="prod-img-cart" src={this.props.cartItems[i][0]} />
           </div>
         );
   	  }
     }
-  return (
-	<div id="cart-window">
-	  <p> Total price: {totalPrice}</p>
-	  {items}
-	</div>
-  );
-}
+  	return (
+	  <div id="cart-window">
+	  	<p> Total price: {totalPrice}</p>
+	  	{items}
+	  </div>
+  	);
+  }
 }
 
 

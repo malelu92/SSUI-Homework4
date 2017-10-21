@@ -212,6 +212,11 @@
   width: 30em;
 }
 
+#prod-img-cart {
+  height: 120px;
+  width: 120px;
+}
+
 .prod-mini-cards {
   border: 2px solid #999;
   border-radius: 10px;
