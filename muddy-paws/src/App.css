@@ -67,6 +67,19 @@
   padding:6px 15px;
 }
 
+#cart-window {
+  background-color: rgb(256,256,256);
+  border:2px solid black;
+  border-radius: 25px;
+  color: black;
+  float: left;
+  height: 500px;
+  position: absolute; /*trocar */
+  margin-left: 70%;
+  margin-top: 15%;
+  width: 500px;
+}
+
 .checkout-cart-info {
   font-size: 20px;
   margin-left: 10%;

@@ -33,15 +33,18 @@ class App extends Component {
   }
 
   onHover() {
-    console.log("hover")
-    var cartHover = <CartHover alt = {"lala"} image = {dogHarnessOne}/>
+    var totalPrice = 0;
+    if(this.state.cartProdQtys) {
+      for (var i=0; i < this.state.cartProdQtys.length; i++) {
+        totalPrice += this.state.cartProdQtys[i]*this.state.cartItems[i][3];
+      }
+    }
+    var cartHover = <CartHover totPrice = {totalPrice} image = {dogHarnessOne}/>
     this.setState({cartWindow: cartHover});
-    {/*return <cartHover/>*/}
   }
 
   offHover() {
     this.setState({cartWindow: null});
-    {/*return <cartHover/>*/}
   }
 
   renderCartHover() {
@@ -111,7 +114,7 @@ class App extends Component {
             <img src={shoppingCart} className={"shopping-cart-img"} alt="shopping cart image"/>
             <p id="shopping-cart-text">{this.state.cartQty} items</p>
           </div>
-          {this.renderCartHover()}
+            {this.renderCartHover()}
         </header>
         <div className="app-nav-bar">
             <div className = {"app-nav-link" + (this.state.page === 1 ? " active" : "")} onClick={(ev) => this.setState({page: 1})} >PRODUCTS</div>
