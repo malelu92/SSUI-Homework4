@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css'
 
-import fiveStars from'./images/five_stars.png';
+import fourStars from'./images/four_stars.jpg';
 
 class ProductInfo extends Component {
   constructor(props) {
@@ -44,11 +44,11 @@ class ProductInfo extends Component {
     	  <p className={"prod-name"}>{this.props.prodSel[1]}</p>
     	  <div className={"screen-align"}>
       	    <p>
-      	      <img src={fiveStars} className={"stars-main-page"} alt="five stars rating image"></img>
+      	      <img src={fourStars} className={"stars-main-page"} alt="four stars rating image"></img>
             customer review</p>
     	  </div>
     	  <p className={"prod-price"}>U$ {this.props.prodSel[3]}</p>
-        <p>{this.props.prodSel[2]}</p>
+        <p id="prod-desc">{this.props.prodSel[2]}</p>
 
     	<br></br>
 

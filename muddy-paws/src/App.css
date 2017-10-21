@@ -186,6 +186,11 @@
   font-size: 150%;
 }
 
+#prod-desc {
+  font-size: 150%;
+  text-align: left;
+}
+
 .prods-display {
   border:2px solid black;
   display: flex;
