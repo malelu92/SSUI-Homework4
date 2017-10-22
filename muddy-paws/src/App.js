@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import mainImage from './images/home_page_im1.jpg';
 import muddyPawsLogo from './images/muddy_paws_logo.png';
 import shoppingCart from "./images/shopping_cart.png";
 import './App.css';
@@ -49,7 +47,7 @@ class App extends Component {
     this.setState({cartQty: newQty});
     for (var i = 0; i < this.state.cartItems.length; i++) {
       {/* product already on cart*/}
-      if(this.state.prodSel[1] == this.state.cartItems[i][1]) {
+      if(this.state.prodSel[1] === this.state.cartItems[i][1]) {
         this.state.cartProdQtys[i] += value;
         prodFound = true;
       }

@@ -39,6 +39,11 @@ class Products extends Component {
 
   renderInventory() {
     var elements = []
+    var mainStars = []
+    for(var i=0; i < 5; i++) {
+      var st = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
+      mainStars.push(st);
+    }
     for(var i=0; i < this.state.itemsShown; i++)
     {
       const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
@@ -61,22 +66,22 @@ class Products extends Component {
     		    </div>
           </div>
         <p className={"filter-opt"}>Customer review</p>
-        {/*<div className={"filter-opt-list"}>
+        <div className={"filter-opt-list"}>
           <input id="checkBox" type="checkbox"></input>
-          <img src={stars} className = {"stars-main-page"}></img>
+          <img src={mainStars[0]} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={stars} className = {"stars-main-page"}></img>
+          <img src={mainStars[1]} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={stars} className = {"stars-main-page"}></img>
+          <img src={mainStars[2]} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={stars} className = {"stars-main-page"}></img>
+          <img src={mainStars[3]} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={stars} className = {"stars-main-page"}></img>
-        </div>*/}
+          <img src={mainStars[4]} className = {"stars-main-page"}></img>
+        </div>
         <p className={"filter-opt"}>Price</p>
         <div className={"filter-opt-list"}>
     	    <div>

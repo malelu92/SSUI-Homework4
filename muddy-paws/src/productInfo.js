@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
 
-import fourStars from'./images/four_stars.jpg';
-
 class ProductInfo extends Component {
   constructor(props) {
 	  super(props);

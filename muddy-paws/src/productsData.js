@@ -1,6 +1,3 @@
-import React, { Component } from 'react';
-import './App.css'
-
 class ProductsData {
   constructor(){
     var data = require('./data.json');
