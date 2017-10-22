@@ -5,19 +5,11 @@ import ProductsData from './productsData.js';
 
 import mainImage from './images/home_page_im1.jpg';
 
-import oneStar from'./images/one_star.jpg';
-import twoStars from'./images/two_stars.jpg';
-import threeStars from'./images/three_stars.jpg';
-import fourStars from'./images/four_stars.jpg';
-import fiveStars from'./images/five_stars.png';
-
-
 class Main extends Component {
   constructor(props) {
 	  super(props);
 	  this.state = {
-      itemsShown: 4,
-      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
+      itemsShown: 4
     }
     this.selectItem = this.selectItem.bind(this);
   }

@@ -34,8 +34,6 @@ class Checkout extends Component {
 
   removeFromCart(id) {
     var difProds = this.props.cartItems.length
-    var items = [];
-    var contTotal = 0;
     this.props.removeCart('cartQty', id);
     this.render();
   }

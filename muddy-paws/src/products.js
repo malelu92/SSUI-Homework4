@@ -4,40 +4,25 @@ import ProductsData from './productsData.js';
 import ProductInfo from './productInfo.js';
 import StoreItem from './storeItem.js';
 
-import catHarnessOne from './images/cat_harness1.jpg';
-import dogHarnessOne from './images/dog_harness1.jpg';
-import dogHarnessTwo from './images/dog_harness2.jpg';
-import dogHarnessThree from './images/dog_harness3.png';
-import dogHarnessFour from './images/dog_harness4.png';
-import dogHarnessFive from './images/dog_harness5.png';
-import dogHarnessSix from './images/dog_harness6.png';
-import dogGPS from './images/dogGPS.jpg';
-
-import oneStar from'./images/one_star.jpg';
-import twoStars from'./images/two_stars.jpg';
-import threeStars from'./images/three_stars.jpg';
-import fourStars from'./images/four_stars.jpg';
-import fiveStars from'./images/five_stars.png';
-
 class Products extends Component {
   constructor(props) {
 	super(props);
-	this.state = {
-      inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree, dogHarnessFour, dogHarnessFive, dogHarnessSix, dogGPS],
-      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
+  this.state = {
+      itemsShown: 8
     }
-    this.selectItem = this.selectItem.bind(this);
+  this.selectItem = this.selectItem.bind(this);
   }
 
   selectItem(id) {
     console.log("selected ",id)
+    const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
     var item = this.state.inventory[id]
     var prodInfo = [];
-    prodInfo.push(this.state.inventory[id]);
+    prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
-    prodInfo.push(this.state.stars[3]);
+    prodInfo.push(ProductsData.stars[id]);
     this.props.updatePage('prodSel', prodInfo);
   }
 
@@ -57,10 +42,11 @@ class Products extends Component {
 
   renderInventory() {
     var elements = []
-    for(var i=0; i < this.state.inventory.length; i++)
+    for(var i=0; i < this.state.itemsShown; i++)
     {
-      {/*var item = this.state.inventory[i]*/}
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
+      const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
+      const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {stars} />)
     }
     return (
       <div className={"screen-align"}>
@@ -78,22 +64,22 @@ class Products extends Component {
     		    </div>
           </div>
         <p className={"filter-opt"}>Customer review</p>
-        <div className={"filter-opt-list"}>
+        {/*<div className={"filter-opt-list"}>
           <input id="checkBox" type="checkbox"></input>
-          <img src={fiveStars} className = {"stars-main-page"}></img>
+          <img src={stars} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={fourStars} className = {"stars-main-page"}></img>
+          <img src={stars} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={threeStars} className = {"stars-main-page"}></img>
+          <img src={stars} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={twoStars} className = {"stars-main-page"}></img>
+          <img src={stars} className = {"stars-main-page"}></img>
           <br></br>
           <input id="checkBox" type="checkbox"></input>
-          <img src={oneStar} className = {"stars-main-page"}></img>
-        </div>
+          <img src={stars} className = {"stars-main-page"}></img>
+        </div>*/}
         <p className={"filter-opt"}>Price</p>
         <div className={"filter-opt-list"}>
     	    <div>
