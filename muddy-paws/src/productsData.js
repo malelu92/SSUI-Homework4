@@ -8,6 +8,7 @@ class ProductsData {
     this.names = data.names;
     this.descriptions = data.descriptions;
     this.prices = data.prices;
+    this.stars = data.stars;
   }
 }
 

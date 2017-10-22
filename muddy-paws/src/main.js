@@ -3,10 +3,6 @@ import './App.css'
 import StoreItem from './storeItem.js';
 import ProductsData from './productsData.js';
 
-import catHarnessOne from './images/cat_harness1.jpg';
-import dogHarnessOne from './images/dog_harness1.jpg';
-import dogHarnessTwo from './images/dog_harness2.jpg';
-import dogHarnessThree from './images/dog_harness3.png';
 import mainImage from './images/home_page_im1.jpg';
 
 import oneStar from'./images/one_star.jpg';
@@ -21,15 +17,15 @@ class Main extends Component {
 	  super(props);
 	  this.state = {
       itemsShown: 4,
-      inventory: [catHarnessOne, dogHarnessOne, dogHarnessTwo, dogHarnessThree],
       stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
     }
     this.selectItem = this.selectItem.bind(this);
   }
 
   selectItem(id) {
+    const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
     var prodInfo = [];
-    prodInfo.push(this.state.inventory[id]);
+    prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
@@ -41,8 +37,9 @@ class Main extends Component {
     for(var i=0; i < this.state.itemsShown; i++)
     {
       const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
+      const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
       console.log(imageSource)
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {stars} />)
     }
     return (
       <div className={"prods-display"}>

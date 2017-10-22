@@ -4,15 +4,20 @@
     "dog_harness1.jpg",
     "dog_harness2.jpg",
     "dog_harness3.png",
-    "./images/dog_harness4.png",
-    "./images/dog_harness5.png",
-    "./images/dog_harness6.png",
-    "./images/dogGPS.jpg",
-    "./images/one_star.jpg",
-    "./images/two_stars.jpg",
-    "./images/three_stars.jpg",
-    "./images/four_stars.jpg",
-    "./images/five_stars.png"
+    "dog_harness4.png",
+    "dog_harness5.png",
+    "dog_harness6.png",
+    "dogGPS.jpg"
+  ],
+  "stars": [
+    "one_star.jpg",
+    "two_stars.jpg",
+    "three_stars.jpg",
+    "four_stars.jpg",
+    "five_stars.png",
+    "three_stars.jpg",
+    "four_stars.jpg",
+    "five_stars.png"
   ],
   "names": [
     "Cat Harness 2000",
