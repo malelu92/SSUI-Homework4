@@ -44,7 +44,7 @@ class ProductInfo extends Component {
     	  <p className={"prod-name"}>{this.props.prodSel[1]}</p>
     	  <div className={"screen-align"}>
       	    <p>
-      	      <img src={fourStars} className={"stars-main-page"} alt="four stars rating image"></img>
+      	      <img src={this.props.prodSel[4]} className={"stars-main-page"} alt="four stars rating image"></img>
             customer review</p>
     	  </div>
     	  <p className={"prod-price"}>U$ {this.props.prodSel[3]}</p>

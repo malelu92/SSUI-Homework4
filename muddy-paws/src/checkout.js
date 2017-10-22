@@ -14,13 +14,13 @@ class Checkout extends Component {
     this.removeFromCart = this.removeFromCart.bind(this);
   }
 
-  selectItem(id) {
+  selectItem(id, imageSource, stars) {
     var prodInfo = [];
-    const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
     prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
+    prodInfo.push(stars);
     this.props.updatePage('prodSel', prodInfo);
   }
 
@@ -37,7 +37,7 @@ class Checkout extends Component {
     {
       const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
       const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]} star = {stars}/>)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i, imageSource, stars)} image = {imageSource} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]} star = {stars}/>)
       suggestedProds.push(
         <div className={"screen-align"}>
           <div>{elements[i]}</div>

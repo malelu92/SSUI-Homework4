@@ -13,15 +13,13 @@ class Products extends Component {
   this.selectItem = this.selectItem.bind(this);
   }
 
-  selectItem(id) {
-    console.log("selected ",id)
-    const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
+  selectItem(id, imageSource, stars) {
     var prodInfo = [];
     prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
-    prodInfo.push(ProductsData.stars[id]);
+    prodInfo.push(stars);
     this.props.updatePage('prodSel', prodInfo);
   }
 
@@ -45,7 +43,7 @@ class Products extends Component {
     {
       const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
       const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {stars} />)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i, imageSource, stars)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {stars} />)
     }
     return (
       <div className={"screen-align"}>
