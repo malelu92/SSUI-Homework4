@@ -37,11 +37,12 @@ class Main extends Component {
   }
 
   renderInventory() {
-    const imageSource = ProductsData.images[0];
     var elements = []
     for(var i=0; i < this.state.itemsShown; i++)
     {
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
+      const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
+      console.log(imageSource)
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]} />)
     }
     return (
       <div className={"prods-display"}>

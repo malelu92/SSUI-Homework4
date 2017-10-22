@@ -1,9 +1,9 @@
 {
   "images": [
-    "./images/cat_harness1.jpg",
-    "./images/dog_harness1.jpg",
-    "./images/dog_harness2.jpg",
-    "./images/dog_harness3.png",
+    "cat_harness1.jpg",
+    "dog_harness1.jpg",
+    "dog_harness2.jpg",
+    "dog_harness3.png",
     "./images/dog_harness4.png",
     "./images/dog_harness5.png",
     "./images/dog_harness6.png",

@@ -17,7 +17,8 @@ class CartHover extends Component {
         totalPrice += itemTotalPrice;
 
       {/* push products to cart window*/}
-      	items.push(    
+      	items.push(
+          <div>
       	  <div className={"screen-align"}>
             <img id="prod-img-cart" src={this.props.cartItems[i][0]} />
             <div id="prod-info-cart">
@@ -25,12 +26,15 @@ class CartHover extends Component {
               <p>price: {itemTotalPrice}</p>
             </div>
           </div>
+          <hr/>
+          </div>
         );
   	  }
     }
   	return (
 	  <div id="cart-window">
 	  	<p> Total price: {totalPrice}</p>
+      <hr/>
 	  	{items}
 	  </div>
   	);
