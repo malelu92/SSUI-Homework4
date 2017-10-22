@@ -6,9 +6,9 @@ import StoreItem from './storeItem.js';
 class Checkout extends Component {
   constructor(props) {
 	  super(props);
-    var itemsShown = 2
     this.state = {
       totalPrice: 0,
+      itemsShown: 2
     };
     this.selectItem = this.selectItem.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
@@ -32,7 +32,7 @@ class Checkout extends Component {
   renderInventory() {
     var suggestedProds = [];
     var elements = []
-    for(var i=0; i < this.itemsShown; i++)
+    for(var i=0; i < this.state.itemsShown; i++)
     {
       const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
       const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
