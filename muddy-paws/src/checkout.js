@@ -3,21 +3,12 @@ import './App.css'
 import ProductsData from './productsData.js';
 import StoreItem from './storeItem.js';
 
-import catHarnessOne from './images/cat_harness1.jpg';
-import dogHarnessOne from './images/dog_harness1.jpg';
-import oneStar from'./images/one_star.jpg';
-import twoStars from'./images/two_stars.jpg';
-import threeStars from'./images/three_stars.jpg';
-import fourStars from'./images/four_stars.jpg';
-import fiveStars from'./images/five_stars.png';
-
 class Checkout extends Component {
   constructor(props) {
 	  super(props);
+    var itemsShown = 2
     this.state = {
       totalPrice: 0,
-      inventory: [catHarnessOne, dogHarnessOne],
-      stars: [oneStar, twoStars, threeStars, fourStars, fiveStars]
     };
     this.selectItem = this.selectItem.bind(this);
     this.removeFromCart = this.removeFromCart.bind(this);
@@ -25,7 +16,8 @@ class Checkout extends Component {
 
   selectItem(id) {
     var prodInfo = [];
-    prodInfo.push(this.state.inventory[id]);
+    const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
+    prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
     prodInfo.push(ProductsData.descriptions[id]);
     prodInfo.push(ProductsData.prices[id]);
@@ -41,9 +33,11 @@ class Checkout extends Component {
   renderInventory() {
     var suggestedProds = [];
     var elements = []
-    for(var i=0; i < this.state.inventory.length; i++)
+    for(var i=0; i < this.itemsShown; i++)
     {
-      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {this.state.inventory[i]} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]} star = {this.state.stars[3]}/>)
+      const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[i];
+      const stars = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.stars[i];
+      elements.push(<StoreItem onClick = {this.selectItem.bind(this, i)} image = {imageSource} altText = {ProductsData.names[i]} description = {ProductsData.descriptions[i]} price = {ProductsData.prices[i]} star = {stars}/>)
       suggestedProds.push(
         <div className={"screen-align"}>
           <div>{elements[i]}</div>

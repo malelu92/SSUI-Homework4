@@ -16,7 +16,6 @@ class Products extends Component {
   selectItem(id) {
     console.log("selected ",id)
     const imageSource = "https://s3.us-east-2.amazonaws.com/mudpaws/" + ProductsData.images[id];
-    var item = this.state.inventory[id]
     var prodInfo = [];
     prodInfo.push(imageSource);
     prodInfo.push(ProductsData.names[id]);
